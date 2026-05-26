@@ -1,0 +1,875 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aura 3D ✨ | Estudio de Impresión y Diseño</title>
+    <meta
+      name="description"
+      content="Aura 3D - Estudio de diseño e impresión 3D. Materializamos tus ideas digitales. Figuras personalizadas, decoración y piezas útiles con la mejor calidad."
+    />
+    <meta name="theme-color" content="#09090b" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/images/iconos/logo_png_blanco.png"
+    />
+    <script type="module" src="main.js"></script>
+  </head>
+
+  <body class="home-page-body">
+    <div class="aura-backdrop" aria-hidden="true">
+      <span class="aura-orb aura-orb-a"></span>
+      <span class="aura-orb aura-orb-b"></span>
+      <span class="aura-orb aura-orb-c"></span>
+    </div>
+    <div class="site-noise" aria-hidden="true"></div>
+
+    <div
+      id="promo-banner"
+      class="promo-banner"
+      role="region"
+      aria-label="Promoción ruleta Aura 3D"
+    >
+      <div class="promo-sheen" aria-hidden="true"></div>
+      <div class="container promo-content">
+        <span>
+          🎉 <strong>¡OFERTA EXCLUSIVA!</strong> Gira la ruleta y gana premios
+          increíbles. 🎁
+        </span>
+        <a href="ruleta.html" class="btn-promo-small">Probar Suerte</a>
+        <button
+          id="close-banner"
+          class="close-promo"
+          type="button"
+          aria-label="Cerrar promoción"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <nav class="navbar" aria-label="Navegación principal">
+      <div class="container nav-content">
+        <div class="logo">
+          <a href="#" aria-label="Aura 3D inicio">
+            <img
+              src="assets/images/iconos/logo_png_blanco.png"
+              alt="Logotipo oficial de Aura 3D estudio de diseño e impresión"
+              class="logo-img"
+            />
+          </a>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#experiencia">Clientes</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="ruleta.html" class="nav-cta nav-cta-desktop"
+            ><i class="fas fa-gift"></i><span>Ruleta</span></a
+          >
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="Cambiar tema"
+          >
+            <i class="fas fa-moon"></i>
+          </button>
+          <button
+            class="hamburger"
+            id="hamburger"
+            type="button"
+            aria-label="Abrir menú"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <picture class="hero-picture">
+        <source
+          media="(max-width: 780px)"
+          srcset="assets/images/3daura_sergio_carlos_2.png"
+        />
+        <img
+          src="assets/images/3daura_sergio_carlos.png"
+          alt="Sergio Valiente y Carlos Parriego"
+          class="image-background"
+        />
+      </picture>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <span class="tag fade-in">Diseño & Impresión 3D</span>
+        <h1 class="fade-in">
+          Materializamos tus <br /><span class="highlight"
+            >Ideas Digitales</span
+          >
+        </h1>
+        <p class="fade-in">
+          Especialistas en figuras de colección, decoración para el hogar y
+          piezas útiles. Calidad excelente, entregada en tu puerta.
+        </p>
+        <div class="hero-badges fade-in" aria-label="Puntos fuertes de Aura 3D">
+          <span><i class="fas fa-shield-halved"></i> PLA+</span>
+          <span><i class="fas fa-wand-magic-sparkles"></i> Personalizado</span>
+          <span><i class="fas fa-truck-fast"></i> 24/72h</span>
+        </div>
+        <div class="hero-actions fade-in">
+          <a
+            href="https://www.wallapop.com/user/3da-476018086?_pid=wi&_uid=476018086"
+            class="btn-secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+            >🛒 Comprar <i class="fas fa-arrow-right"></i
+          ></a>
+          <a href="#galeria" class="btn-primary">
+            🖼️ Ver Galería <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <div
+          class="hero-product-strip fade-in"
+          aria-label="Vista previa de piezas Aura 3D"
+        >
+          <img
+            src="assets/images/azulejos/corales/corales_1.jpg"
+            alt="Azulejo Corales"
+            loading="lazy"
+          />
+          <img
+            src="assets/images/bustos_mascotas/busto_1.png"
+            alt="Busto personalizado de mascota"
+            loading="lazy"
+          />
+          <img
+            src="assets/images/fnaf/fnaf_1.png"
+            alt="Figura FNAF impresa en 3D"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#servicios" aria-label="Bajar a servicios">
+        <span></span>
+      </a>
+    </header>
+
+    <section class="brand-marquee" aria-label="Especialidades Aura 3D">
+      <div class="marquee-track">
+        <span>Figuras de colección</span><span>Decoración personalizada</span
+        ><span>Acabado premium</span><span>Diseño a medida</span>
+        <span>Figuras de colección</span><span>Decoración personalizada</span
+        ><span>Acabado premium</span><span>Diseño a medida</span>
+      </div>
+    </section>
+
+    <section id="servicios" class="section-shell">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="tag">Servicios Aura 3D</span>
+          <h2>Nuestros Servicios</h2>
+          <p>
+            No solo vendemos figuras, ofrecemos experiencias completas adaptadas
+            a coleccionistas, artistas y todo tipo de cliente.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="service-card fade-in">
+            <div class="service-icon"><i class="fas fa-cube"></i></div>
+            <h3>Figura en Bruto (Raw)</h3>
+            <p>
+              Ideal para artistas y hobbyistas. Recibe la pieza limpia, sin
+              soportes y curada, lista para tu imprimación.
+            </p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Figura totalmente blanca</li>
+              <li><i class="fas fa-check"></i> Sin marcas de soportes</li>
+              <li><i class="fas fa-check"></i> Precio más económico</li>
+            </ul>
+          </article>
+
+          <article class="service-card featured-card fade-in">
+            <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+            <h3>Acabado Premium</h3>
+            <p>
+              Si te consideras un cliente mas exigente, esta es tu elección
+              final sin ninguna duda. Un servicio en el que obtendrás tu
+              elección lijada, limpia, y pintada.
+            </p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Pintura acrílica</li>
+              <li><i class="fas fa-check"></i> Secado lento</li>
+              <li><i class="fas fa-check"></i> Listo para exhibir</li>
+            </ul>
+          </article>
+
+          <article class="service-card fade-in">
+            <div class="service-icon"><i class="fas fa-pen-fancy"></i></div>
+            <h3>Diseño Personalizado</h3>
+            <p>
+              ¿No encuentras lo que buscas? No te preocupes, nos adaptamos a ti
+              al 100%, elige esta opción si quieres que tu elección sea
+              totalmente a tu gusto.
+            </p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Escalado personalizado</li>
+              <li><i class="fas fa-check"></i> Modificación de mallas</li>
+              <li><i class="fas fa-check"></i> Presupuesto a medida</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-comprar" class="section-shell section-muted">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="tag">Guía Rápida</span>
+          <h2>¿Cómo conseguir tu pieza?</h2>
+          <p>
+            Tres caminos sencillos para materializar tus ideas, desde figuras de
+            catálogo hasta diseños únicos.
+          </p>
+        </div>
+
+        <div class="grid-3 process-grid">
+          <article class="service-card process-card fade-in">
+            <div class="service-icon">1</div>
+            <h3>Elige tu favorita</h3>
+            <p>
+              Explora nuestra <strong>Colección</strong>. Si buscas una figura
+              lista para enviar, haz clic en el botón de compra.
+            </p>
+            <ul class="service-features">
+              <li>
+                <i class="fas fa-shopping-bag"></i> Compra segura vía
+                Wallapop/Vinted
+              </li>
+              <li><i class="fas fa-truck"></i> Envío protegido en 24/72h</li>
+            </ul>
+          </article>
+
+          <article class="service-card process-card fade-in">
+            <div class="service-icon">2</div>
+            <h3>Pide un presupuesto</h3>
+            <p>
+              ¿Quieres algo a medida o pintado a mano? Rellena el
+              <strong>Formulario de Contacto</strong> con tu idea.
+            </p>
+            <ul class="service-features">
+              <li><i class="fas fa-envelope"></i> Respuesta en menos de 24h</li>
+              <li>
+                <i class="fas fa-file-invoice-dollar"></i> Presupuesto sin
+                compromiso
+              </li>
+            </ul>
+          </article>
+
+          <article class="service-card process-card fade-in">
+            <div class="service-icon">3</div>
+            <h3>Descarga el STL</h3>
+            <p>
+              Si eres un maker y tienes tu propia impresora, puedes adquirir
+              nuestros archivos digitales directamente.
+            </p>
+            <ul class="service-features">
+              <li><i class="fas fa-download"></i> Enlace directo a Cults3D</li>
+              <li><i class="fas fa-print"></i> Optimizado para impresión</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tarifas" class="section-shell">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="tag">Orientativo</span>
+          <h2 class="h2_header">Tarifas Estimadas</h2>
+          <p>
+            Precios base orientativos para tus proyectos. Contacta para un
+            presupuesto final exacto.
+          </p>
+        </div>
+        <div class="grid-3 price-grid">
+          <article class="price-card fade-in">
+            <div class="price-header">
+              <span>Desde</span>
+              <div class="amount">15€</div>
+            </div>
+            <div class="price-body">
+              <h3>Básico / Raw</h3>
+              <p>
+                Impresión limpia y curada, lista para que tú le des vida con tus
+                pinceles.
+              </p>
+            </div>
+          </article>
+          <article class="price-card highlight-card fade-in">
+            <div class="price-header">
+              <span>Desde</span>
+              <div class="amount">25€</div>
+            </div>
+            <div class="price-body">
+              <h3>Premium Gold</h3>
+              <p>
+                Post-procesado manual y acabado artístico profesional. Lista
+                para vitrina.
+              </p>
+            </div>
+          </article>
+          <article class="price-card fade-in">
+            <div class="price-header">
+              <span>Desde</span>
+              <div class="amount">Consultar</div>
+            </div>
+            <div class="price-body">
+              <h3>Modelado</h3>
+              <p>
+                Diseño desde cero o modificaciones complejas de archivos
+                existentes.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros" class="section-shell">
+      <div class="container">
+        <div class="about-grid fade-in">
+          <div class="about-image image-frame">
+            <img
+              src="assets/images/equipo.png"
+              alt="Equipo fundadores de Aura 3D"
+            />
+          </div>
+          <div class="sobre-nosotros">
+            <div class="section-header align-left">
+              <span class="tag">Sobre nosotros</span>
+              <h2>
+                ¿Quiénes somos y cómo nace
+                <span class="highlight">Aura 3D</span>?
+              </h2>
+            </div>
+            <p>
+              ✨ <strong>Aura 3D</strong> nace entre risas, ideas locas y bromas
+              entre colegas. Todo surgió de infinitos
+              <em>"¿Y si hacemos esto?"</em> y <em>"¿Y esto otro?"</em>. Pues
+              bien, esos colegas somos nosotros:
+              <strong>Sergio Valiente</strong> y
+              <strong>Carlos Parriego</strong>. 🤝
+            </p>
+            <p>
+              🚀 Lo que empezó como una charla más, se convirtió en el impulso
+              para ponernos manos a la obra. <strong>Sergio</strong> ya llevaba
+              años dándole caña a su impresora 3D 🖨️, y <strong>Carlos</strong>,
+              atrapado por las historias y el potencial de este mundillo,
+              decidió sumarse a la aventura con su propia máquina 🛠️.
+            </p>
+            <div class="call-to-action">
+              <p>
+                Pero...
+                <strong>¿En qué punto nos encontramos ahora mismo?</strong> 🤔
+                ¿Te pica la curiosidad? ¡Mejor compruébalo con tus propios ojos!
+                👀 👇
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="specs" class="tech-specs">
+      <div class="container">
+        <div class="spec-grid fade-in">
+          <div class="spec-item">
+            <h4>8K</h4>
+            <p>Resolución de Impresión</p>
+          </div>
+          <div class="spec-item">
+            <h4>PLA+</h4>
+            <p>PLA de Alta Resistencia</p>
+          </div>
+          <div class="spec-item">
+            <h4>0.02mm</h4>
+            <p>Altura de Capa</p>
+          </div>
+          <div class="spec-item">
+            <h4>100%</h4>
+            <p>Relleno Sólido (Opcional)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="section-shell">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="tag">Colección</span>
+          <h2>Galería de Imágenes</h2>
+          <p>Una selección de nuestras piezas más populares.</p>
+        </div>
+        <div class="home-gallery grid">
+          <figure class="gallery-card fade-in">
+            <img
+              src="assets/images/azulejos/corales/corales_1.jpg"
+              alt="Azulejo personalizado Corales"
+              title=""
+              loading="lazy"
+            />
+            <figcaption>
+              <span>Vista rápida</span
+              ><strong>Azulejo personalizado Corales</strong>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card fade-in">
+            <img
+              src="assets/images/bustos_mascotas/busto_1.png"
+              alt="Busto personalizado de mascota"
+              title=""
+              loading="lazy"
+            />
+            <figcaption>
+              <span>Vista rápida</span
+              ><strong>Busto personalizado de mascota</strong>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card fade-in">
+            <img
+              src="assets/images/fnaf/fnaf_1.png"
+              alt="Figura FNAF impresa en 3D"
+              title=""
+              loading="lazy"
+            />
+            <figcaption>
+              <span>Vista rápida</span
+              ><strong>Figura FNAF impresa en 3D</strong>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card fade-in">
+            <img
+              src="assets/images/azulejos/casa_dellafuente.jpg"
+              alt="Azulejo Casa Dellafuente"
+              title=""
+              loading="lazy"
+            />
+            <figcaption>
+              <span>Vista rápida</span><strong>Azulejo Casa Dellafuente</strong>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card fade-in">
+            <img
+              src="assets/images/azulejos/portate_bien.jpg"
+              alt="Azulejo Pórtate bien"
+              title=""
+              loading="lazy"
+            />
+            <figcaption>
+              <span>Vista rápida</span><strong>Azulejo Pórtate bien</strong>
+            </figcaption>
+          </figure>
+          <figure class="gallery-card fade-in">
+            <img
+              src="assets/images/azulejos/dellafuente_logo.jpg"
+              alt="Azulejo logo Dellafuente"
+              title=""
+              loading="lazy"
+            />
+            <figcaption>
+              <span>Vista rápida</span><strong>Azulejo logo Dellafuente</strong>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="fade-in section-footer">
+        <a href="galeria.html" class="btn-catalogo">
+          Galería completa <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+      <div
+        class="container category-showcase fade-in"
+        aria-label="Accesos rápidos al catálogo"
+      >
+        <a href="galeria.html#azulejos" class="category-tile"
+          ><i class="fas fa-border-all"></i><span>Azulejos</span></a
+        >
+        <a href="galeria.html#bustos" class="category-tile"
+          ><i class="fas fa-paw"></i><span>Bustos</span></a
+        >
+        <a href="galeria.html#funkos" class="category-tile"
+          ><i class="fas fa-user-astronaut"></i><span>Funkos</span></a
+        >
+        <a href="galeria.html#decoracion" class="category-tile"
+          ><i class="fas fa-couch"></i><span>Decoración</span></a
+        >
+      </div>
+    </section>
+
+    <section id="experiencia" class="section-shell section-muted">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="tag">Clientes</span>
+          <h2>Experiencia Aura 3D</h2>
+          <p>
+            Más allá de la impresión: envíos rápidos, packaging cuidado y trato
+            cercano.
+          </p>
+        </div>
+        <div class="grid-3">
+          <article class="review-card square-style fade-in">
+            <div class="review-image-square">
+              <div class="placeholder-img">
+                <img src="assets/images/reseñas/reseña_2.png" alt="Caja" />
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>"Me sorprendió lo bien protegido que venía todo. ¡Un 10!"</p>
+            <h4>Carlos M.</h4>
+          </article>
+          <article class="review-card square-style fade-in">
+            <div class="review-image-square">
+              <div class="placeholder-img">
+                <img src="assets/images/reseñas/reseña_1.png" alt="Oso" />
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>
+              "Respondieron al momento por Instagram con medidas exactas y
+              fotos. Da gusto tratar con gente así."
+            </p>
+            <h4>Sara R.</h4>
+          </article>
+          <article class="review-card square-style fade-in">
+            <div class="review-image-square">
+              <div class="placeholder-img">
+                <img src="assets/images/reseñas/reseña_3.png" alt="Vecna" />
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>
+              "Llegó justo a tiempo. La presentación es impecable, lista para
+              regalar directamente."
+            </p>
+            <h4>Lucía P.</h4>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section-shell contact-section">
+      <div class="container narrow">
+        <div class="section-header fade-in">
+          <span class="tag">Contacto</span>
+          <h2>Presupuesto Personalizado</h2>
+          <p>Cuéntanos tu idea y nos pondremos en contacto contigo.</p>
+        </div>
+        <div class="contact-links-block fade-in">
+          <div class="contact-links-heading">
+            <span class="tag">Redes & Marketplaces</span>
+            <h3>O encuéntranos directamente en:</h3>
+            <p>
+              Elige tu canal favorito para seguir nuestras novedades, comprar en
+              nuestras plataformas o escribirnos directamente.
+            </p>
+          </div>
+
+          <div
+            class="contact-links-grid"
+            aria-label="Enlaces directos de Aura 3D"
+          >
+            <a
+              class="social-link-card tiktok"
+              href="https://www.tiktok.com/@3daura"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir TikTok de Aura 3D"
+            >
+              <span class="social-link-icon"
+                ><i class="fab fa-tiktok"></i
+              ></span>
+              <span class="social-link-copy">
+                <strong>TikTok</strong>
+                <small>@3daura</small>
+              </span>
+              <span class="social-link-arrow"
+                ><i class="fas fa-arrow-up-right-from-square"></i
+              ></span>
+            </a>
+
+            <a
+              class="social-link-card instagram"
+              href="https://www.instagram.com/3daura_/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir Instagram de Aura 3D"
+            >
+              <span class="social-link-icon"
+                ><i class="fab fa-instagram"></i
+              ></span>
+              <span class="social-link-copy">
+                <strong>Instagram</strong>
+                <small>@3daura_</small>
+              </span>
+              <span class="social-link-arrow"
+                ><i class="fas fa-arrow-up-right-from-square"></i
+              ></span>
+            </a>
+
+            <a
+              class="social-link-card wallapop"
+              href="https://www.wallapop.com/user/3da-476018086?_pid=wi&_uid=476018086"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir perfil de Wallapop de Aura 3D"
+            >
+              <span class="social-link-icon"
+                ><span class="platform-mark platform-mark-wallapop"
+                  >w</span
+                ></span
+              >
+              <span class="social-link-copy">
+                <strong>Wallapop</strong>
+                <small>Tienda Aura 3D</small>
+              </span>
+              <span class="social-link-arrow"
+                ><i class="fas fa-arrow-up-right-from-square"></i
+              ></span>
+            </a>
+
+            <a
+              class="social-link-card linkedin"
+              href="https://www.linkedin.com/company/3d-aura/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir LinkedIn de Aura 3D"
+            >
+              <span class="social-link-icon"
+                ><i class="fab fa-linkedin-in"></i
+              ></span>
+              <span class="social-link-copy">
+                <strong>LinkedIn</strong>
+                <small>3D Aura</small>
+              </span>
+              <span class="social-link-arrow"
+                ><i class="fas fa-arrow-up-right-from-square"></i
+              ></span>
+            </a>
+
+            <a
+              class="social-link-card cults"
+              href="https://cults3d.com/en/users/aura3d/3d-models"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir Cults3D de Aura 3D"
+            >
+              <span class="social-link-icon"><i class="fas fa-cube"></i></span>
+              <span class="social-link-copy">
+                <strong>Cults3D</strong>
+                <small>Aura3D_Studio</small>
+              </span>
+              <span class="social-link-arrow"
+                ><i class="fas fa-arrow-up-right-from-square"></i
+              ></span>
+            </a>
+
+            <a
+              class="social-link-card email"
+              href="mailto:3daurainfo@gmail.com"
+              aria-label="Enviar email a Aura 3D"
+            >
+              <span class="social-link-icon"
+                ><i class="fas fa-envelope"></i
+              ></span>
+              <span class="social-link-copy">
+                <strong>Email</strong>
+                <small>3daurainfo@gmail.com</small>
+              </span>
+              <span class="social-link-arrow"
+                ><i class="fas fa-paper-plane"></i
+              ></span>
+            </a>
+          </div>
+        </div>
+
+        <form
+          id="contact-form"
+          name="contacto_Aura3D"
+          method="POST"
+          class="fade-in contact-card"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          netlify
+        >
+          <input type="hidden" name="form-name" value="contacto_Aura3D" />
+          <p class="hidden" style="display: none">
+            <label
+              >Don’t fill this out if you're human: <input name="bot-field"
+            /></label>
+          </p>
+          <div class="input-group">
+            <label for="nombre">Mi nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              required
+              placeholder="Tu nombre completo"
+            />
+          </div>
+          <div class="input-group">
+            <label for="email">Mi correo electrónico</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="ejemplo@correo.com"
+            />
+          </div>
+          <div class="input-group">
+            <label for="instagram">Mi Instagram (Opcional)</label>
+            <input
+              type="text"
+              id="instagram"
+              name="instagram"
+              placeholder="@tu_usuario"
+            />
+          </div>
+          <div class="input-group">
+            <label for="servicio">Servicio que deseo</label>
+            <select id="servicio" name="servicio" required>
+              <option value="" disabled selected>Selecciona un servicio</option>
+              <option value="Figura en Bruto">Figura en Bruto (Raw)</option>
+              <option value="Acabado Premium">Acabado Premium</option>
+              <option value="Diseño Personalizado">Diseño Personalizado</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="adicional">Información adicional</label>
+            <textarea
+              id="adicional"
+              name="adicional"
+              rows="4"
+              required
+              placeholder="Cuéntanos más sobre tu proyecto..."
+            ></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full">
+            Enviar Solicitud <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <h3>Aura<span class="highlight">3D</span></h3>
+        <div class="socials">
+          <a
+            href="https://www.tiktok.com/@3daura"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok Aura 3D"
+            title="TikTok"
+            ><i class="fab fa-tiktok"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/3daura_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram Aura 3D"
+            title="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="mailto:3daurainfo@gmail.com"
+            aria-label="Email Aura 3D"
+            title="Email"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+        <p class="footer-text">&copy; 2026 Aura 3D. Diseñado con pasión.</p>
+      </div>
+    </footer>
+
+    <button
+      id="scrollTopBtn"
+      title="Volver arriba"
+      type="button"
+      aria-label="Volver arriba"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div
+      id="form-success-toast"
+      class="toast-notification"
+      role="status"
+      aria-live="polite"
+    >
+      <div class="toast-content">
+        <i class="fas fa-check-circle"></i>
+        <div>
+          <h4>¡Recibido con éxito!</h4>
+          <p>Sergio o Carlos te contactarán pronto.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="promo-popup" class="modal-overlay" aria-hidden="true">
+      <div
+        class="modal-content promo-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="promo-title"
+      >
+        <button
+          id="close-popup"
+          class="modal-close"
+          type="button"
+          aria-label="Cerrar popup"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-body">
+          <div class="modal-badge"><i class="fas fa-gift"></i></div>
+          <h2 id="promo-title">
+            ¡Llegó la <span class="highlight">Ruleta!</span>
+          </h2>
+          <p>
+            No dejes pasar la oportunidad de llevarte un premio exclusivo o un
+            descuento increíble para tu próxima pedido.
+          </p>
+          <a href="ruleta.html" class="btn-primary btn-full"
+            >¡Tirar la Ruleta!</a
+          >
+          <button id="remind-later" class="btn-ghost" type="button">
+            Recordármelo más tarde
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

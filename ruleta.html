@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aura 3D ✨ | Ruleta de Premios</title>
+    <meta name="description" content="Ruleta de premios de Aura 3D. Participa y desbloquea descuentos o premios exclusivos." />
+    <meta name="theme-color" content="#09090b" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="assets/images/iconos/logo_png_blanco.png" />
+    <script type="module" src="main.js"></script>
+  </head>
+  <body class="ruleta-page-body">
+  <div class="aura-backdrop" aria-hidden="true">
+    <span class="aura-orb aura-orb-a"></span>
+    <span class="aura-orb aura-orb-b"></span>
+    <span class="aura-orb aura-orb-c"></span>
+  </div>
+  <div class="site-noise" aria-hidden="true"></div>
+
+    <nav class="navbar" aria-label="Navegación principal">
+      <div class="container nav-content">
+        <div class="logo">
+          <a href="index.html" aria-label="Aura 3D inicio">
+            <img src="assets/images/iconos/logo_png_blanco.png" alt="Logotipo Aura 3D" class="logo-img" />
+          </a>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="index.html#nosotros">Nosotros</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+        <div class="nav-actions">
+          
+        <a href="galeria.html" class="nav-cta nav-cta-desktop"><i class="fas fa-images"></i><span>Catálogo</span></a>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="ruleta-section">
+        <div class="ruleta-bg-glow" aria-hidden="true"></div>
+        <div class="ruleta-sparkles" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="container ruleta-grid">
+          <div class="ruleta-info glass-card fade-in visible">
+            <span class="tag">Promoción exclusiva</span>
+            <h1 class="h2-ruleta">Tira y <span class="highlight">Gana</span></h1>
+            <p class="p-ruleta">
+              Introduce tus datos para desbloquear tu tirada. <br /><strong>¡Tienes descuentos y premios asegurados!</strong>
+            </p>
+
+            <div class="prize-mini-grid" aria-label="Premios disponibles">
+              <span><i class="fas fa-percent"></i> 10% DTO</span>
+              <span><i class="fas fa-truck-fast"></i> Envío Gratis</span>
+              <span><i class="fas fa-gift"></i> Llavero Regalo</span>
+            </div>
+
+            <div class="ruleta-steps" aria-label="Pasos de participación">
+              <span><strong>01</strong> Completa tus datos</span>
+              <span><strong>02</strong> Gira la ruleta</span>
+              <span><strong>03</strong> Recibe tu premio</span>
+            </div>
+
+            <form
+              id="ruleta-form"
+              name="ruleta_Aura3D"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              netlify
+            >
+              <input type="hidden" name="form-name" value="ruleta_Aura3D" />
+              <input type="hidden" name="Premio_Ganado" id="premio-ganado" value="Pendiente" />
+              <p style="display: none"><input name="bot-field" /></p>
+
+              <div class="input-group">
+                <input type="text" id="nombre" name="nombre" required placeholder="Nombre" />
+              </div>
+              <div class="input-group">
+                <input type="text" id="apellidos" name="apellidos" required placeholder="Apellidos" />
+              </div>
+              <div class="input-group">
+                <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com" />
+              </div>
+              <div class="input-group">
+                <input type="text" id="instagram" name="instagram" placeholder="@tu_usuario_instagram (Opcional)" />
+              </div>
+
+              <button type="submit" class="btn-primary btn-girar-full" id="btn-girar">
+                Desbloquear Ruleta <i class="fas fa-unlock"></i>
+              </button>
+            </form>
+
+            <div id="resultado-box" class="resultado-box"></div>
+          </div>
+
+          <div class="ruleta-wheel-panel fade-in visible">
+            <div class="ruleta-wheel-box">
+              <div class="wheel-halo" aria-hidden="true"></div>
+              <div class="ruleta-pointer-box">
+                <svg class="ruleta-pointer" viewBox="0 0 100 100" aria-hidden="true">
+                  <path d="M 90 20 L 10 50 L 90 80 Z" fill="#ff2a5f" />
+                  <circle cx="80" cy="50" r="12" fill="#18181b" stroke="#ffffff" stroke-width="3" />
+                </svg>
+              </div>
+              <canvas id="ruletaCanvas" width="520" height="520" aria-label="Ruleta de premios Aura 3D"></canvas>
+              <div class="wheel-center-glint" aria-hidden="true"></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <h3>Aura<span class="highlight">3D</span></h3>
+        <div class="socials">
+        <a href="https://www.tiktok.com/@3daura" target="_blank" rel="noopener noreferrer" aria-label="TikTok Aura 3D" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.instagram.com/3daura_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Aura 3D" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:3daurainfo@gmail.com" aria-label="Email Aura 3D" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+        <p class="footer-text">&copy; 2026 Aura 3D. Diseñado con pasión.</p>
+      </div>
+    </footer>
+  </body>
+</html>

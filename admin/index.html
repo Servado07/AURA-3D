@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#09090b" />
+    <title>Panel privado | Aura 3D</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="icon" type="image/png" href="../assets/images/iconos/logo_png_blanco.png" />
+    <link rel="stylesheet" href="admin.css" />
+    <script defer src="admin.js"></script>
+  </head>
+  <body>
+    <div class="admin-bg" aria-hidden="true"></div>
+
+    <main class="admin-shell">
+      <section id="login-view" class="login-card login-card-private" aria-labelledby="login-title">
+        <div class="login-private-ambient" aria-hidden="true"></div>
+        <div class="login-private-ring" aria-hidden="true"></div>
+
+        <div class="login-private-brand">
+          <img src="../assets/images/iconos/logo_png_blanco.png" alt="Aura 3D" class="login-logo" />
+          <span>Aura 3D</span>
+        </div>
+
+        <div class="login-private-copy">
+          <span class="eyebrow">Área privada</span>
+          <h1 id="login-title">Acceso privado</h1>
+          <p>Introduce tus credenciales para continuar.</p>
+        </div>
+
+        <form id="login-form" class="login-form login-form-private">
+          <label for="admin-username">
+            <span>Usuario</span>
+            <div class="login-input-shell">
+              <i class="fas fa-user" aria-hidden="true"></i>
+              <input id="admin-username" name="username" type="text" autocomplete="username" placeholder="Usuario" required />
+            </div>
+          </label>
+
+          <label for="admin-password">
+            <span>Contraseña</span>
+            <div class="login-input-shell">
+              <i class="fas fa-lock" aria-hidden="true"></i>
+              <input id="admin-password" name="password" type="password" autocomplete="current-password" placeholder="Contraseña" required />
+            </div>
+          </label>
+
+          <button class="login-submit" type="submit">
+            <span>Entrar</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </form>
+      </section>
+
+      <section id="app-view" class="app-view" hidden>
+        <header class="admin-header">
+          <div>
+            <span class="eyebrow">Aura 3D Admin</span>
+            <h1>Productos</h1>
+            <p id="status-text">Preparado para cargar el catálogo.</p>
+          </div>
+          <div class="header-actions">
+            <a class="ghost-link" href="../galeria.html" target="_blank" rel="noopener noreferrer"><i class="fas fa-eye"></i> Ver catálogo</a>
+            <button id="reload-btn" class="icon-btn" type="button" title="Recargar"><i class="fas fa-rotate"></i></button>
+            <button id="logout-btn" class="icon-btn" type="button" title="Salir"><i class="fas fa-right-from-bracket"></i></button>
+          </div>
+        </header>
+
+        <div class="admin-grid">
+          <aside class="products-panel glass-panel">
+            <div class="panel-title-row">
+              <div>
+                <h2>Catálogo actual</h2>
+                <p id="product-count">0 productos</p>
+              </div>
+              <button id="new-product-btn" type="button" class="small-primary"><i class="fas fa-plus"></i> Nuevo</button>
+            </div>
+            <div class="admin-search">
+              <i class="fas fa-search"></i>
+              <input id="admin-search" type="search" placeholder="Buscar producto..." />
+            </div>
+            <div id="products-list" class="products-list"></div>
+
+            <div class="admin-divider"></div>
+
+            <section class="sections-manager" aria-labelledby="sections-title">
+              <div class="panel-title-row sections-title-row">
+                <div>
+                  <h2 id="sections-title">Secciones</h2>
+                  <p id="category-count">0 secciones</p>
+                </div>
+                <button id="new-category-btn" type="button" class="small-secondary"><i class="fas fa-layer-group"></i> Nueva</button>
+              </div>
+
+              <div id="categories-list" class="categories-list"></div>
+
+              <form id="category-form" class="category-form">
+                <input type="hidden" id="category-original-id" />
+                <div class="field-grid two-cols compact-grid">
+                  <label>
+                    <span>Nombre *</span>
+                    <input id="category-name" type="text" required placeholder="Ej. Azulejos" />
+                  </label>
+                  <label>
+                    <span>Icono</span>
+                    <select id="category-icon">
+                      <option value="fa-border-all">Azulejos</option>
+                      <option value="fa-paw">Mascotas</option>
+                      <option value="fa-user-astronaut">Funkos</option>
+                      <option value="fa-cube">Figuras</option>
+                      <option value="fa-ghost">Terror</option>
+                      <option value="fa-couch">Decoración</option>
+                      <option value="fa-gem">Premium</option>
+                      <option value="fa-dragon">Fantasía</option>
+                      <option value="fa-gamepad">Gaming</option>
+                      <option value="fa-mug-hot">Hogar</option>
+                      <option value="fa-heart">Regalos</option>
+                      <option value="fa-star">Otros</option>
+                    </select>
+                  </label>
+                </div>
+                <label>
+                  <span>Identificador</span>
+                  <input id="category-id" type="text" placeholder="Se genera automáticamente" />
+                  <small>Se usa para filtros y enlaces. Déjalo vacío para generarlo desde el nombre.</small>
+                </label>
+                <div class="category-actions">
+                  <button id="save-category-btn" type="submit" class="small-primary"><i class="fas fa-floppy-disk"></i> Guardar sección</button>
+                  <button id="delete-category-btn" type="button" class="danger-btn compact-danger" hidden><i class="fas fa-trash"></i> Eliminar</button>
+                </div>
+              </form>
+            </section>
+          </aside>
+
+          <section class="editor-panel glass-panel">
+            <div class="panel-title-row editor-title-row">
+              <div>
+                <h2 id="editor-title">Nuevo producto</h2>
+                <p>Rellena los campos como si subieras un anuncio.</p>
+              </div>
+              <button id="delete-product-btn" class="danger-btn" type="button" hidden><i class="fas fa-trash"></i> Eliminar</button>
+            </div>
+
+            <form id="product-form" class="product-form">
+              <input type="hidden" id="product-id" />
+
+              <div class="field-grid two-cols">
+                <label>
+                  <span>Título *</span>
+                  <input id="product-title" type="text" required placeholder="Ej. Funko mascota personalizado" />
+                </label>
+                <label>
+                  <span>Categoría principal *</span>
+                  <select id="product-primary-category" required></select>
+                </label>
+              </div>
+
+              <label>
+                <span>Descripción</span>
+                <textarea id="product-description" rows="4" placeholder="Describe el producto, medidas, colores, personalización..."></textarea>
+              </label>
+
+              <label>
+                <span>Palabras clave</span>
+                <input id="product-keywords" type="text" placeholder="azulejo, dellafuente, regalo, decoración" />
+                <small>Separadas por comas. Ayudan al buscador del catálogo.</small>
+              </label>
+
+              <div class="category-box">
+                <span>Categorías donde debe aparecer</span>
+                <div id="category-checks" class="category-checks"></div>
+              </div>
+
+              <div class="field-grid three-cols">
+                <label class="toggle-card">
+                  <input id="product-visible" type="checkbox" checked />
+                  <span><strong>Visible</strong><small>Aparece en la galería</small></span>
+                </label>
+                <label class="toggle-card">
+                  <input id="product-featured" type="checkbox" />
+                  <span><strong>Destacado</strong><small>Sale en inicio</small></span>
+                </label>
+                <label>
+                  <span>Texto ALT</span>
+                  <input id="product-alt" type="text" placeholder="Descripción accesible de la imagen" />
+                </label>
+              </div>
+
+              <div class="links-box">
+                <h3>Links de compra o descarga</h3>
+                <div class="field-grid three-cols">
+                  <label>
+                    <span>Wallapop</span>
+                    <input id="product-wallapop" type="url" placeholder="https://..." />
+                  </label>
+                  <label>
+                    <span>Vinted</span>
+                    <input id="product-vinted" type="url" placeholder="https://..." />
+                  </label>
+                  <label>
+                    <span>Cults3D</span>
+                    <input id="product-cults" type="url" placeholder="https://..." />
+                  </label>
+                </div>
+              </div>
+
+              <div class="images-box" id="images-box">
+                <div class="images-heading">
+                  <div>
+                    <h3>Fotos del producto</h3>
+                    <p>Desde móvil puedes elegir fotos de tu galería. En ordenador también puedes arrastrarlas aquí.</p>
+                  </div>
+                  <label class="upload-btn">
+                    <i class="fas fa-cloud-arrow-up"></i>
+                    <span>Añadir fotos</span>
+                    <input id="product-images" type="file" accept="image/*" multiple />
+                  </label>
+                </div>
+
+                <div id="image-drop-zone" class="image-drop-zone" role="button" tabindex="0" aria-label="Arrastra fotos aquí o pulsa para seleccionarlas">
+                  <div class="drop-zone-icon"><i class="fas fa-images"></i></div>
+                  <div>
+                    <strong>Arrastra tus fotos aquí</strong>
+                    <span>o haz clic para elegirlas desde tu dispositivo</span>
+                  </div>
+                </div>
+
+                <div id="current-images" class="image-preview-grid"></div>
+                <div id="new-images" class="image-preview-grid"></div>
+              </div>
+
+              <div class="form-actions">
+                <button id="save-product-btn" type="submit" class="primary-action"><i class="fas fa-upload"></i> Publicar cambios</button>
+                <button id="reset-form-btn" type="button" class="secondary-action"><i class="fas fa-eraser"></i> Limpiar</button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

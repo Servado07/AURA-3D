@@ -1,0 +1,797 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-21T20:45:58.136Z",
+  "categories": [
+    {
+      "id": "azulejos",
+      "name": "Azulejos",
+      "icon": "fa-border-all"
+    },
+    {
+      "id": "bustos",
+      "name": "Bustos",
+      "icon": "fa-paw"
+    },
+    {
+      "id": "funkos",
+      "name": "Funkos",
+      "icon": "fa-user-astronaut"
+    },
+    {
+      "id": "figuras",
+      "name": "Figuras",
+      "icon": "fa-cube"
+    },
+    {
+      "id": "decoracion",
+      "name": "Decoración",
+      "icon": "fa-couch"
+    }
+  ],
+  "products": [
+    {
+      "id": "corales",
+      "title": "Azulejos de Corales - Dellafuente",
+      "description": "Azulejo del album Azulejos de Corales de Dellafuente",
+      "primaryCategory": "azulejos",
+      "categories": [
+        "azulejos"
+      ],
+      "keywords": [
+        "azulejo",
+        "corales",
+        "pared",
+        "decoracion",
+        "personalizada",
+        "dellafuente"
+      ],
+      "images": [
+        "assets/images/azulejos/corales/corales_1.jpg"
+      ],
+      "alt": "Azulejo Corales",
+      "featured": true,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "casa-dellafuente",
+      "title": "En esta casa se escucha Dellafuente",
+      "description": "Azulejo \"En esta casa se escucha Dellafuente\". Cantante totalmente personalizable.",
+      "primaryCategory": "azulejos",
+      "categories": [
+        "azulejos"
+      ],
+      "keywords": [
+        "azulejo",
+        "casa",
+        "dellafuente",
+        "musica",
+        "decoracion"
+      ],
+      "images": [
+        "assets/images/azulejos/casa_dellafuente.jpg"
+      ],
+      "alt": "Azulejo Casa Dellafuente",
+      "featured": true,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "portate-bien",
+      "title": "Portate Bien - Mvrk",
+      "description": "Cartel del album Portate Bien del cantante Mvrk",
+      "primaryCategory": "azulejos",
+      "categories": [
+        "azulejos"
+      ],
+      "keywords": [
+        "azulejo",
+        "portate",
+        "bien",
+        "decoracion",
+        "pared",
+        "mvrk"
+      ],
+      "images": [
+        "assets/images/azulejos/portate_bien.jpg"
+      ],
+      "alt": "Azulejo Pórtate Bien",
+      "featured": true,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "dellafuente-logo",
+      "title": "DellafuenteFC Logo",
+      "description": "Logo del escudo de DellafuenteFC",
+      "primaryCategory": "azulejos",
+      "categories": [
+        "azulejos"
+      ],
+      "keywords": [
+        "azulejo",
+        "dellafuente",
+        "logo",
+        "musica",
+        "decoracion"
+      ],
+      "images": [
+        "assets/images/azulejos/dellafuente_logo.jpg"
+      ],
+      "alt": "Azulejo Dellafuente Logo",
+      "featured": true,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "reinsertado",
+      "title": "Reinsertado - Morad",
+      "description": "Azulejo del album Reinsertado del cantante Morad",
+      "primaryCategory": "azulejos",
+      "categories": [
+        "azulejos"
+      ],
+      "keywords": [
+        "azulejo",
+        "reinsertado",
+        "decoracion",
+        "pared",
+        "morad"
+      ],
+      "images": [
+        "assets/images/productos/reinsertado/img-9196-1777717226492-1.jpg"
+      ],
+      "alt": "Azulejo Reinsertado",
+      "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "cenicero-hdlr",
+      "title": "Cenicero HDLR",
+      "description": "",
+      "primaryCategory": "azulejos",
+      "categories": [
+        "azulejos",
+        "decoracion"
+      ],
+      "keywords": [
+        "azulejo",
+        "cenicero",
+        "hdlr",
+        "decoracion",
+        "accesorio"
+      ],
+      "images": [
+        "assets/images/azulejos/cenicero_hdlr.jpg"
+      ],
+      "alt": "Cenicero HDLR",
+      "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "busto-mascota",
+      "title": "Busto Mascota",
+      "description": "",
+      "primaryCategory": "bustos",
+      "categories": [
+        "bustos"
+      ],
+      "keywords": [
+        "busto",
+        "mascota",
+        "animal",
+        "personalizado",
+        "perro",
+        "gato"
+      ],
+      "images": [
+        "assets/images/bustos_mascotas/busto_1.png"
+      ],
+      "alt": "Busto de mascota",
+      "featured": true,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "busto-mia",
+      "title": "Busto Mia",
+      "description": "",
+      "primaryCategory": "bustos",
+      "categories": [
+        "bustos"
+      ],
+      "keywords": [
+        "busto",
+        "mia",
+        "mascota",
+        "personalizado",
+        "animal"
+      ],
+      "images": [
+        "assets/images/bustos_mascotas/busto_mia.jpg"
+      ],
+      "alt": "Busto Mia",
+      "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "busto-airon",
+      "title": "Busto Airon",
+      "description": "",
+      "primaryCategory": "bustos",
+      "categories": [
+        "bustos"
+      ],
+      "keywords": [
+        "busto",
+        "airon",
+        "mascota",
+        "personalizado",
+        "animal"
+      ],
+      "images": [
+        "assets/images/bustos_mascotas/busto_airon.jpg"
+      ],
+      "alt": "Busto Airon",
+      "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "funko-mascota",
+      "title": "Funko Mascota",
+      "description": "",
+      "primaryCategory": "funkos",
+      "categories": [
+        "funkos"
+      ],
+      "keywords": [
+        "funko",
+        "mascota",
+        "pop",
+        "personalizado",
+        "animal"
+      ],
+      "images": [
+        "assets/images/pop_mascota/funko_mascota2.jpg"
+      ],
+      "alt": "Funko mascota personalizado",
+      "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "daryl",
+      "title": "Daryl",
+      "description": "Funko Pop del personaje de The Walking Dead Daryl",
+      "primaryCategory": "figuras",
+      "categories": [
+        "funkos",
+        "figuras"
+      ],
+      "keywords": [
+        "figura",
+        "daryl",
+        "coleccion",
+        "personaje"
+      ],
+      "images": [
+        "assets/images/daryl.jpg"
+      ],
+      "alt": "Figura Daryl",
+      "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "fnaf",
+      "title": "FNAF",
+      "description": "",
+      "primaryCategory": "figuras",
+      "categories": [
+        "figuras"
+      ],
+      "keywords": [
+        "fnaf",
+        "five",
+        "nights",
+        "freddy",
+        "terror",
+        "figura"
+      ],
+      "images": [
+        "assets/images/fnaf/fnaf_1.png"
+      ],
+      "alt": "Figura FNAF",
+      "featured": true,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "vecna-chibi",
+      "title": "Vecna Chibi",
+      "description": "",
+      "primaryCategory": "figuras",
+      "categories": [
+        "figuras"
+      ],
+      "keywords": [
+        "vecna",
+        "chibi",
+        "terror",
+        "figura",
+        "stranger",
+        "things"
+      ],
+      "images": [
+        "assets/images/vecna_chibi.jpg"
+      ],
+      "alt": "Figura Vecna Chibi",
+      "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "demogorgon",
+      "title": "Demogorgon",
+      "description": "",
+      "primaryCategory": "figuras",
+      "categories": [
+        "figuras"
+      ],
+      "keywords": [
+        "demogorgon",
+        "terror",
+        "figura",
+        "stranger",
+        "things",
+        "monstruo"
+      ],
+      "images": [
+        "assets/images/demogorgon.JPEG"
+      ],
+      "alt": "Figura Demogorgon",
+      "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "bandeja-supreme",
+      "title": "Bandeja Supreme",
+      "description": "",
+      "primaryCategory": "decoracion",
+      "categories": [
+        "decoracion"
+      ],
+      "keywords": [
+        "bandeja",
+        "supreme",
+        "decoracion",
+        "accesorio"
+      ],
+      "images": [
+        "assets/images/bandeja_supreme.JPG"
+      ],
+      "alt": "Bandeja Supreme",
+      "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "contento-morad",
+      "title": "Contento - Morad",
+      "description": "Azulejo de la canción del cantante Morad",
+      "primaryCategory": "azulejos",
+      "categories": [
+        "azulejos"
+      ],
+      "keywords": [
+        "azulejo",
+        "morad",
+        "contento"
+      ],
+      "images": [
+        "assets/images/productos/contento-morad/img-9193-1777716408491-1.jpg"
+      ],
+      "alt": "Contento - Morad",
+      "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "daisy-rusowsky",
+      "title": "Daisy - Rusowsky",
+      "description": "Azulejo del álbum Daisy del cantante Rusowsky",
+      "primaryCategory": "azulejos",
+      "categories": [
+        "azulejos"
+      ],
+      "keywords": [
+        "azulejo",
+        "Daisy",
+        "Rusowsky"
+      ],
+      "images": [
+        "assets/images/productos/daisy-rusowsky/img-9194-1777716482107-1.jpg"
+      ],
+      "alt": "Daisy - Rusowsky",
+      "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "ansia-viva-dellafuente",
+      "title": "Ansia Viva - Dellafuente",
+      "description": "Azulejo del álbum Ansia Viva de Dellafuente",
+      "primaryCategory": "azulejos",
+      "categories": [
+        "azulejos"
+      ],
+      "keywords": [
+        "Azulejo",
+        "dellafuente",
+        "Ansia Viva"
+      ],
+      "images": [
+        "assets/images/productos/ansia-viva-dellafuente/img-9197-1777716635575-1.jpg"
+      ],
+      "alt": "Ansia Viva - Dellafuente",
+      "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "13-18-dellafuente",
+      "title": "13/18 - Dellafuente",
+      "description": "Azulejo de la canción 13/18 del cantante Dellafuente",
+      "primaryCategory": "azulejos",
+      "categories": [
+        "azulejos"
+      ],
+      "keywords": [
+        "azulejo",
+        "dellafuente",
+        "13/18"
+      ],
+      "images": [
+        "assets/images/productos/13-18-dellafuente/img-9198-1777716682968-1.jpg"
+      ],
+      "alt": "13/18 - Dellafuente",
+      "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "ysl-8belial",
+      "title": "YSL - 8belial",
+      "description": "Azulejo de la canción YSL de los cantantes 8belial e Ynestrosa",
+      "primaryCategory": "azulejos",
+      "categories": [
+        "azulejos"
+      ],
+      "keywords": [
+        "azulejo",
+        "8belial",
+        "ynestrosa",
+        "YSL"
+      ],
+      "images": [
+        "assets/images/productos/ysl-8belial/img-9199-1777716725364-1.jpg"
+      ],
+      "alt": "YSL - 8belial",
+      "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "lo-que-tiene-morad",
+      "title": "Lo Que Tiene - Morad",
+      "description": "Azulejo de la canción Lo que tiene de los cantantes Morad, Beny Jr y RVFV",
+      "primaryCategory": "azulejos",
+      "categories": [
+        "azulejos"
+      ],
+      "keywords": [
+        "azulejo",
+        "lo que tiene",
+        "morad",
+        "beny jr",
+        "rvfv"
+      ],
+      "images": [
+        "assets/images/productos/lo-que-tiene-morad/img-9306-1777716807961-1.jpg"
+      ],
+      "alt": "Lo Que Tiene - Morad",
+      "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "se-fue-morad",
+      "title": "Se Fue - Morad",
+      "description": "Azulejo de la canción Se Fue de los cantantes Morad y Moncho Chavea",
+      "primaryCategory": "azulejos",
+      "categories": [
+        "azulejos"
+      ],
+      "keywords": [],
+      "images": [
+        "assets/images/productos/se-fue-morad/img-9307-1777716841868-1.jpg"
+      ],
+      "alt": "Se Fue - Morad",
+      "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "lo-niego-morad",
+      "title": "Lo Niego - Morad",
+      "description": "Azulejo de la canción Lo niego del cantante Morad",
+      "primaryCategory": "azulejos",
+      "categories": [
+        "azulejos"
+      ],
+      "keywords": [
+        "azulejo",
+        "lo niego",
+        "morad"
+      ],
+      "images": [
+        "assets/images/productos/lo-niego-morad/img-9337-1777716932994-1.jpg"
+      ],
+      "alt": "Lo Niego - Morad",
+      "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "milagro-dellafuente",
+      "title": "Milagro - Dellafuente",
+      "description": "Azulejo de la cancion Milagro del cantante Dellafuente",
+      "primaryCategory": "azulejos",
+      "categories": [
+        "azulejos"
+      ],
+      "keywords": [
+        "azulejo",
+        "dellafuente",
+        "milagro"
+      ],
+      "images": [
+        "assets/images/productos/milagro-dellafuente/img-9338-1777716970537-1.jpg"
+      ],
+      "alt": "Milagro - Dellafuente",
+      "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "tres-creus-hoke",
+      "title": "Tres Creus - Hoke",
+      "description": "Azulejo del album tres creus del cantante Hoke",
+      "primaryCategory": "azulejos",
+      "categories": [
+        "azulejos"
+      ],
+      "keywords": [
+        "azulejo",
+        "tres creus",
+        "hoke"
+      ],
+      "images": [
+        "assets/images/productos/tres-creus-hoke/img-9392-1777717009072-1.jpg"
+      ],
+      "alt": "Tres Creus - Hoke",
+      "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "cuentamelo-dellafuente",
+      "title": "Cuentamelo - Dellafuente",
+      "description": "Azulejo de la cancion cuentamelo del cantante Dellafuente",
+      "primaryCategory": "azulejos",
+      "categories": [
+        "azulejos"
+      ],
+      "keywords": [
+        "azulejo",
+        "cuentamelo",
+        "dellafuente"
+      ],
+      "images": [
+        "assets/images/productos/cuentamelo-dellafuente/img-9336-1777717072734-1.jpg"
+      ],
+      "alt": "Cuentamelo - Dellafuente",
+      "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "soporte-papel-higienico",
+      "title": "Soporte Papel Higiénico",
+      "description": "Soporte en forma de oveja para los rollos de papel higiénicos",
+      "primaryCategory": "decoracion",
+      "categories": [
+        "decoracion"
+      ],
+      "keywords": [
+        "decoracion",
+        "papel",
+        "higiénico",
+        "oveja"
+      ],
+      "images": [
+        "assets/images/productos/soporte-papel-higienico/img-9236-1777717315109-1.jpg"
+      ],
+      "alt": "Soporte Papel Higiénico",
+      "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "funko-pop-gato",
+      "title": "Funko Pop Gato",
+      "description": "Funko Pop personalizado para un gato",
+      "primaryCategory": "funkos",
+      "categories": [
+        "funkos",
+        "figuras"
+      ],
+      "keywords": [
+        "funko",
+        "pop",
+        "mascota",
+        "personalizado",
+        "gato"
+      ],
+      "images": [
+        "assets/images/productos/funko-pop-gato/3ae89d41-4c49-4884-8544-cb8218aa289a-1777717443417-1.jpg"
+      ],
+      "alt": "Funko Pop Gato",
+      "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "ya-no-te-veo-dellafuente",
+      "title": "Ya No Te Veo - Dellafuente",
+      "description": "Azulejo Ya No Te Veo del cantante Dellafuente",
+      "primaryCategory": "azulejos",
+      "categories": [
+        "azulejos"
+      ],
+      "keywords": [
+        "Azulejo",
+        "Dellafuente",
+        "música"
+      ],
+      "images": [
+        "assets/images/productos/ya-no-te-veo-dellafuente/img-9881-1779396351335-1.jpg"
+      ],
+      "alt": "Ya No Te Veo - Dellafuente",
+      "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    }
+  ]
+}

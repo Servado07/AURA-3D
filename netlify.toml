@@ -1,0 +1,29 @@
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[[headers]]
+  for = "/data/productos.json"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+
+[[headers]]
+  for = "/data/aura-knowledge.json"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+
+[[redirects]]
+  from = "/sorteo"
+  to = "/sorteo.html"
+  status = 200
+
+[[redirects]]
+  from = "/galeria"
+  to = "/galeria.html"
+  status = 200
