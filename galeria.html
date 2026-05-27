@@ -1,188 +1,277 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aura 3D ✨ | Galería</title>
+    <meta
+      name="description"
+      content="Catálogo completo de Aura 3D. Explora nuestras figuras coleccionables, decoración para el hogar, Funko Pops personalizados y accesorios de impresión 3D."
+    />
+    <meta
+      name="keywords"
+      content="catalogo impresion 3d, comprar figuras 3d, aura 3d catalogo, funko pop mascota, azulejos dellafuente 3d"
+    />
+    <meta name="author" content="Aura 3D" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#09090b" />
+    <link rel="canonical" href="https://3daura.store/catalogo.html" />
+    <meta property="og:title" content="Aura 3D ✨ | Galería" />
+    <meta
+      property="og:description"
+      content="Explora todas nuestras creaciones listas para imprimir o enviar."
+    />
+    <meta
+      property="og:image"
+      content="https://3daura.store/assets/images/iconos/logo_png.png"
+    />
+    <meta property="og:url" content="https://3daura.store/catalogo.html" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/images/iconos/logo_png_blanco.png"
+    />
+    <script type="module" src="main.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aura 3D ✨ | Galería</title>
-  <meta name="description"
-    content="Catálogo completo de Aura 3D. Explora nuestras figuras coleccionables, decoración para el hogar, Funko Pops personalizados y accesorios de impresión 3D." />
-  <meta name="keywords"
-    content="catalogo impresion 3d, comprar figuras 3d, aura 3d catalogo, funko pop mascota, azulejos dellafuente 3d" />
-  <meta name="author" content="Aura 3D" />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#09090b" />
-  <link rel="canonical" href="https://3daura.store/catalogo.html" />
-  <meta property="og:title" content="Aura 3D ✨ | Galería" />
-  <meta property="og:description" content="Explora todas nuestras creaciones listas para imprimir o enviar." />
-  <meta property="og:image" content="https://3daura.store/assets/images/iconos/logo_png.png" />
-  <meta property="og:url" content="https://3daura.store/catalogo.html" />
-  <meta property="og:type" content="website" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="assets/images/iconos/logo_png_blanco.png" />
-  <script type="module" src="main.js"></script>
-</head>
+  <body class="catalog-page-body">
+    <div class="aura-backdrop" aria-hidden="true">
+      <span class="aura-orb aura-orb-a"></span>
+      <span class="aura-orb aura-orb-b"></span>
+      <span class="aura-orb aura-orb-c"></span>
+    </div>
+    <div class="site-noise" aria-hidden="true"></div>
 
-<body class="catalog-page-body">
-  <div class="aura-backdrop" aria-hidden="true">
-    <span class="aura-orb aura-orb-a"></span>
-    <span class="aura-orb aura-orb-b"></span>
-    <span class="aura-orb aura-orb-c"></span>
-  </div>
-  <div class="site-noise" aria-hidden="true"></div>
+    <div
+      id="promo-banner"
+      class="promo-banner"
+      role="region"
+      aria-label="Promoción ruleta Aura 3D"
+    >
+      <div class="promo-sheen" aria-hidden="true"></div>
+      <div class="container promo-content">
+        <span>
+          🎉 <strong>¡OFERTA EXCLUSIVA!</strong> Gira la ruleta y gana premios
+          increíbles. 🎁
+        </span>
+        <a href="ruleta.html" class="btn-promo-small">Probar Suerte</a>
+        <button
+          id="close-banner"
+          class="close-promo"
+          type="button"
+          aria-label="Cerrar promoción"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
 
-  <div id="promo-banner" class="promo-banner" role="region" aria-label="Promoción ruleta Aura 3D">
-    <div class="promo-sheen" aria-hidden="true"></div>
-    <div class="container promo-content">
-      <span>
-        🎉 <strong>¡OFERTA EXCLUSIVA!</strong> Gira la ruleta y gana premios
-        increíbles. 🎁
-      </span>
-      <a href="ruleta.html" class="btn-promo-small">Probar Suerte</a>
-      <button id="close-banner" class="close-promo" type="button" aria-label="Cerrar promoción">
+    <nav class="navbar" aria-label="Navegación principal">
+      <div class="container nav-content">
+        <div class="logo">
+          <a href="index.html" aria-label="Volver al inicio Aura 3D">
+            <img
+              src="assets/images/iconos/logo_png_blanco.png"
+              alt="Logotipo oficial de Aura 3D estudio de diseño e impresión"
+              class="logo-img"
+            />
+          </a>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="index.html#nosotros">Nosotros</a></li>
+          <li><a href="galeria.html" class="active">Galería</a></li>
+          <li><a href="index.html#experiencia">Clientes</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="ruleta.html" class="nav-cta nav-cta-desktop"
+            ><i class="fas fa-gift"></i><span>Ruleta</span></a
+          >
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="Cambiar tema"
+          >
+            <i class="fas fa-moon"></i>
+          </button>
+          <button
+            class="hamburger"
+            id="hamburger"
+            type="button"
+            aria-label="Abrir menú"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <header class="catalog-hero">
+      <div class="catalog-hero-glow" aria-hidden="true"></div>
+      <div class="container">
+        <span class="tag fade-in">Catálogo Aura 3D</span>
+        <h1 class="fade-in">Nuestra Galería</h1>
+        <p class="fade-in">Explora todas nuestras creaciones impresas.</p>
+        <div class="catalog-hero-actions fade-in">
+          <a href="index.html" class="btn-back"
+            ><i class="fas fa-arrow-left"></i> Volver al Inicio</a
+          >
+          <a href="ruleta.html" class="btn-primary"
+            >Probar Ruleta <i class="fas fa-gift"></i
+          ></a>
+        </div>
+        <nav
+          id="catalog-jump-menu"
+          class="catalog-jump-menu fade-in"
+          aria-label="Ir a una sección del catálogo"
+        >
+          <a href="#catalog-sections">Cargando secciones...</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="catalog-page">
+      <section class="catalog-toolbar-wrap" aria-label="Filtros del catálogo">
+        <div class="container catalog-toolbar">
+          <div class="search-box">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <input
+              type="search"
+              id="catalog-search"
+              placeholder="Buscar por palabras clave: azulejo, funko, mascota..."
+              autocomplete="off"
+            />
+            <button
+              id="catalog-search-clear"
+              class="search-clear"
+              type="button"
+              aria-label="Limpiar búsqueda"
+            >
+              <i class="fas fa-xmark"></i>
+            </button>
+          </div>
+
+          <div id="catalog-filters" class="filter-row" aria-label="Categorías">
+            <button class="filter-chip active" type="button" data-filter="all">
+              Todo
+            </button>
+          </div>
+
+          <div class="catalog-meta-row">
+            <span id="catalog-count" class="catalog-count"
+              >Cargando catálogo...</span
+            >
+            <label class="sort-box" for="catalog-sort">
+              <span>Orden</span>
+              <select id="catalog-sort">
+                <option value="original">Original</option>
+                <option value="az">A-Z</option>
+                <option value="category">Categoría</option>
+              </select>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <div id="catalog-sections" class="catalog-sections" aria-live="polite">
+        <div class="catalog-empty container catalog-loading-state">
+          <i class="fas fa-spinner fa-spin"></i>
+          <h3>Cargando catálogo</h3>
+          <p>
+            Estamos actualizando productos y secciones desde el panel de
+            administración.
+          </p>
+        </div>
+      </div>
+
+      <div id="catalog-empty" class="catalog-empty container" hidden>
+        <i class="fas fa-magnifying-glass"></i>
+        <h3>No hay resultados</h3>
+        <p>Prueba con otra palabra clave o cambia el filtro de categoría.</p>
+        <button id="catalog-reset" class="btn-outline" type="button">
+          Limpiar filtros
+        </button>
+      </div>
+    </main>
+
+    <form
+      id="catalog-like-form"
+      name="catalogo_likes"
+      method="POST"
+      data-netlify="true"
+      netlify
+      hidden
+    >
+      <input type="hidden" name="form-name" value="catalogo_likes" />
+      <input type="hidden" name="producto" />
+      <input type="hidden" name="categoria" />
+      <input type="hidden" name="producto_id" />
+      <input type="hidden" name="accion" />
+      <input type="hidden" name="cliente" />
+      <input type="hidden" name="pagina" />
+    </form>
+    <footer>
+      <div class="container">
+        <h3>Aura<span class="highlight">3D</span></h3>
+        <div class="socials">
+          <a
+            href="https://www.tiktok.com/@3daura"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok Aura 3D"
+            title="TikTok"
+            ><i class="fab fa-tiktok"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/3daura_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram Aura 3D"
+            title="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="mailto:3daurainfo@gmail.com"
+            aria-label="Email Aura 3D"
+            title="Email"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+        <p class="footer-text">&copy; 2026 Aura 3D. Diseñado con pasión.</p>
+      </div>
+    </footer>
+
+    <button
+      id="scrollTopBtn"
+      title="Volver arriba"
+      type="button"
+      aria-label="Volver arriba"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div class="lightbox" id="catalog-lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button" aria-label="Cerrar imagen">
         <i class="fas fa-times"></i>
       </button>
+      <img src="" alt="" />
+      <div class="lightbox-caption"></div>
     </div>
-  </div>
-
-  <nav class="navbar" aria-label="Navegación principal">
-    <div class="container nav-content">
-      <div class="logo">
-        <a href="index.html" aria-label="Volver al inicio Aura 3D">
-          <img src="assets/images/iconos/logo_png_blanco.png"
-            alt="Logotipo oficial de Aura 3D estudio de diseño e impresión" class="logo-img" />
-        </a>
-      </div>
-
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html#servicios">Servicios</a></li>
-        <li><a href="index.html#nosotros">Nosotros</a></li>
-        <li><a href="galeria.html" class="active">Galería</a></li>
-        <li><a href="index.html#experiencia">Clientes</a></li>
-        <li><a href="index.html#contacto">Contacto</a></li>
-      </ul>
-
-      <div class="nav-actions">
-        <a href="ruleta.html" class="nav-cta nav-cta-desktop"><i class="fas fa-gift"></i><span>Ruleta</span></a>
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema">
-          <i class="fas fa-moon"></i>
-        </button>
-        <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menú">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-    </div>
-  </nav>
-
-  <header class="catalog-hero">
-    <div class="catalog-hero-glow" aria-hidden="true"></div>
-    <div class="container">
-      <span class="tag fade-in">Catálogo Aura 3D</span>
-      <h1 class="fade-in">Nuestra Galería</h1>
-      <p class="fade-in">Explora todas nuestras creaciones impresas.</p>
-      <div class="catalog-hero-actions fade-in">
-        <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Volver al Inicio</a>
-        <a href="ruleta.html" class="btn-primary">Probar Ruleta <i class="fas fa-gift"></i></a>
-      </div>
-      <nav id="catalog-jump-menu" class="catalog-jump-menu fade-in" aria-label="Ir a una sección del catálogo">
-        <a href="#catalog-sections">Cargando secciones...</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="catalog-page">
-    <section class="catalog-toolbar-wrap" aria-label="Filtros del catálogo">
-      <div class="container catalog-toolbar">
-        <div class="search-box">
-          <i class="fas fa-search" aria-hidden="true"></i>
-          <input type="search" id="catalog-search" placeholder="Buscar por palabras clave: azulejo, funko, mascota..."
-            autocomplete="off" />
-          <button id="catalog-search-clear" class="search-clear" type="button" aria-label="Limpiar búsqueda">
-            <i class="fas fa-xmark"></i>
-          </button>
-        </div>
-
-        <div id="catalog-filters" class="filter-row" aria-label="Categorías">
-          <button class="filter-chip active" type="button" data-filter="all">
-            Todo
-          </button>
-        </div>
-
-        <div class="catalog-meta-row">
-          <span id="catalog-count" class="catalog-count">Cargando catálogo...</span>
-          <label class="sort-box" for="catalog-sort">
-            <span>Orden</span>
-            <select id="catalog-sort">
-              <option value="original">Original</option>
-              <option value="az">A-Z</option>
-              <option value="category">Categoría</option>
-            </select>
-          </label>
-        </div>
-      </div>
-    </section>
-
-    <div id="catalog-sections" class="catalog-sections" aria-live="polite">
-      <div class="catalog-empty container catalog-loading-state">
-        <i class="fas fa-spinner fa-spin"></i>
-        <h3>Cargando catálogo</h3>
-        <p>
-          Estamos actualizando productos y secciones desde el panel de
-          administración.
-        </p>
-      </div>
-    </div>
-
-    <div id="catalog-empty" class="catalog-empty container" hidden>
-      <i class="fas fa-magnifying-glass"></i>
-      <h3>No hay resultados</h3>
-      <p>Prueba con otra palabra clave o cambia el filtro de categoría.</p>
-      <button id="catalog-reset" class="btn-outline" type="button">
-        Limpiar filtros
-      </button>
-    </div>
-  </main>
-
-  <form id="catalog-like-form" name="catalogo_likes" method="POST" data-netlify="true" netlify hidden>
-    <input type="hidden" name="form-name" value="catalogo_likes" />
-    <input type="hidden" name="producto" />
-    <input type="hidden" name="categoria" />
-    <input type="hidden" name="producto_id" />
-    <input type="hidden" name="accion" />
-    <input type="hidden" name="cliente" />
-    <input type="hidden" name="pagina" />
-  </form>
-  <footer>
-    <div class="container">
-      <h3>Aura<span class="highlight">3D</span></h3>
-      <div class="socials">
-        <a href="https://www.tiktok.com/@3daura" target="_blank" rel="noopener noreferrer" aria-label="TikTok Aura 3D"
-          title="TikTok"><i class="fab fa-tiktok"></i></a>
-        <a href="https://www.instagram.com/3daura_/" target="_blank" rel="noopener noreferrer"
-          aria-label="Instagram Aura 3D" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="mailto:3daurainfo@gmail.com" aria-label="Email Aura 3D" title="Email"><i
-            class="fas fa-envelope"></i></a>
-      </div>
-      <p class="footer-text">&copy; 2026 Aura 3D. Diseñado con pasión.</p>
-    </div>
-  </footer>
-
-  <button id="scrollTopBtn" title="Volver arriba" type="button" aria-label="Volver arriba">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-
-  <div class="lightbox" id="catalog-lightbox" aria-hidden="true">
-    <button class="lightbox-close" type="button" aria-label="Cerrar imagen">
-      <i class="fas fa-times"></i>
-    </button>
-    <img src="" alt="" />
-    <div class="lightbox-caption"></div>
-  </div>
-</body>
-
+  </body>
 </html>
