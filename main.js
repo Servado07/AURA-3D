@@ -179,7 +179,8 @@ function initScrollTop() {
     window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
   const update = () => {
-    const shouldShow = currentScrollY() > 320;
+    const shouldShow =
+      currentScrollY() > 320 && !document.body.classList.contains("aura-chat-open");
     scrollTopBtn.classList.toggle("is-visible", shouldShow);
     scrollTopBtn.setAttribute("aria-hidden", shouldShow ? "false" : "true");
   };
@@ -197,6 +198,7 @@ function initScrollTop() {
   update();
   window.addEventListener("scroll", update, { passive: true });
   window.addEventListener("resize", update, { passive: true });
+  window.addEventListener("aura-chat-state", update);
   scrollTopBtn.addEventListener("click", goTop);
   scrollTopBtn.addEventListener("touchend", goTop, { passive: false });
 }
@@ -1551,14 +1553,18 @@ function initAuraChatbot() {
   const openChat = () => {
     panel.hidden = false;
     root.classList.add("is-open");
+    document.body.classList.add("aura-chat-open");
     toggle.setAttribute("aria-expanded", "true");
+    window.dispatchEvent(new CustomEvent("aura-chat-state", { detail: { open: true } }));
     window.setTimeout(() => input?.focus(), 80);
   };
 
   const closeChat = () => {
     panel.hidden = true;
     root.classList.remove("is-open");
+    document.body.classList.remove("aura-chat-open");
     toggle.setAttribute("aria-expanded", "false");
+    window.dispatchEvent(new CustomEvent("aura-chat-state", { detail: { open: false } }));
   };
 
   const loadCatalogForChat = async () => {

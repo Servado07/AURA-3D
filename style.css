@@ -4538,3 +4538,169 @@ select option:checked,
     height: 48px;
   }
 }
+
+/* V32: ajuste responsive de flotantes y AuraBot en movil */
+body.aura-chat-open #scrollTopBtn {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateY(18px) scale(0.94) !important;
+}
+
+.aura-chatbot.is-open {
+  z-index: 2100;
+}
+
+@media (max-width: 640px) {
+  .section-shell {
+    padding: clamp(3.4rem, 11vw, 4.8rem) 0;
+  }
+
+  .section-header {
+    margin-bottom: clamp(1.9rem, 7vw, 2.6rem);
+  }
+
+  .section-header h2,
+  .catalog-section-title h2 {
+    letter-spacing: -0.04em;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-catalogo,
+  .btn-back,
+  .btn-outline,
+  .btn-ghost {
+    min-height: 48px;
+    justify-content: center;
+    padding: 0.85rem 1rem;
+    line-height: 1.18;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .service-card,
+  .price-card,
+  .review-card,
+  .contact-card,
+  .glass-card,
+  .social-link-card {
+    border-radius: 20px;
+  }
+
+  #scrollTopBtn {
+    right: max(0.9rem, env(safe-area-inset-right, 0px));
+    bottom: calc(5.25rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .aura-chatbot {
+    left: max(0.65rem, env(safe-area-inset-left, 0px));
+    right: max(0.65rem, env(safe-area-inset-right, 0px));
+    bottom: calc(0.65rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .aura-chatbot.is-open .aura-chat-toggle {
+    display: none;
+  }
+
+  .aura-chatbot.is-open .aura-chat-panel {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: min(
+      640px,
+      calc(
+        100dvh - 5.6rem - env(safe-area-inset-top, 0px) -
+          env(safe-area-inset-bottom, 0px)
+      )
+    );
+    max-height: calc(
+      100dvh - 5.6rem - env(safe-area-inset-top, 0px) -
+        env(safe-area-inset-bottom, 0px)
+    );
+    border-radius: 22px;
+  }
+
+  .aura-chat-header {
+    flex: 0 0 auto;
+    padding: 0.85rem;
+  }
+
+  .aura-chat-brand {
+    min-width: 0;
+  }
+
+  .aura-chat-brand img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .aura-chat-messages {
+    flex: 1 1 auto;
+    min-height: 0;
+    height: auto;
+    padding: 0.85rem;
+    overscroll-behavior: contain;
+  }
+
+  .aura-chat-suggestions {
+    flex: 0 0 auto;
+    padding: 0.7rem 0.85rem 0;
+    scroll-padding-inline: 0.85rem;
+  }
+
+  .aura-chat-suggestions button {
+    max-width: 72vw;
+  }
+
+  .aura-chat-form {
+    flex: 0 0 auto;
+    gap: 0.55rem;
+    padding: 0.85rem;
+  }
+
+  .aura-chat-form input {
+    min-width: 0;
+    min-height: 46px;
+    border-radius: 14px;
+  }
+
+  .aura-chat-form button {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .aura-chatbot {
+    left: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .aura-chatbot.is-open .aura-chat-panel {
+    height: calc(
+      100dvh - 4.9rem - env(safe-area-inset-top, 0px) -
+        env(safe-area-inset-bottom, 0px)
+    );
+    max-height: calc(
+      100dvh - 4.9rem - env(safe-area-inset-top, 0px) -
+        env(safe-area-inset-bottom, 0px)
+    );
+    border-radius: 18px;
+  }
+
+  .aura-chat-brand span {
+    font-size: 0.72rem;
+  }
+
+  .aura-chat-message > div {
+    max-width: 94%;
+    font-size: 0.9rem;
+  }
+}
