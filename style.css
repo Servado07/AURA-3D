@@ -114,6 +114,7 @@ a {
 .container {
   width: min(92%, var(--container));
   margin: 0 auto;
+
 }
 
 .narrow {
@@ -4439,5 +4440,73 @@ select option:checked,
   .sorteo-info-card img,
   .sorteo-info-card .sorteo-img-wrap {
     height: clamp(245px, 72vw, 340px);
+  }
+}
+
+@media (max-width: 780px) {
+  .catalog-page-body .catalog-hero {
+    min-height: auto;
+    display: block;
+    place-items: initial;
+    padding: clamp(7rem, 22vw, 8.4rem) 0 2.3rem;
+  }
+
+  body.banner-active .catalog-page-body .catalog-hero,
+  body.banner-active .catalog-hero {
+    padding-top: calc(clamp(7rem, 22vw, 8.4rem) + 54px);
+  }
+
+  .catalog-hero .container {
+    width: min(92%, 430px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .catalog-hero .tag {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .catalog-hero h1 {
+    width: 100%;
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: clamp(2.45rem, 11.5vw, 3.35rem);
+    line-height: 0.98;
+    letter-spacing: -0.058em;
+    text-wrap: balance;
+  }
+
+  .catalog-hero p {
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .catalog-hero-actions {
+    width: 100%;
+    max-width: 390px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: stretch;
+  }
+
+  .catalog-hero-actions .btn-back,
+  .catalog-hero-actions .btn-primary {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .catalog-jump-menu {
+    width: min(100%, 390px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-inline: 0.05rem;
   }
 }
