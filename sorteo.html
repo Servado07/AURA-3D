@@ -1,385 +1,464 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aura 3D ✨ | Sorteo Dellafuente</title>
-    <meta
-      name="description"
-      content="Sorteo Dellafuente de Aura 3D x @lummerino en TikTok. Participa del 1 al 7 de junio y gana un azulejo Dellafuente a elegir o un cojín Dellafuente."
-    />
-    <meta name="keywords" content="sorteo dellafuente, aura 3d, sorteo tiktok, azulejo dellafuente, cojin dellafuente" />
-    <meta name="author" content="Aura 3D" />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#09090b" />
-    <link rel="canonical" href="https://3daura.store/sorteo" />
-    <meta property="og:title" content="Aura 3D x @lummerino | Sorteo Dellafuente" />
-    <meta property="og:description" content="Participa del 1 al 7 de junio en el sorteo de TikTok y gana un azulejo Dellafuente a elegir o un cojín Dellafuente." />
-    <meta property="og:image" content="https://3daura.store/assets/images/iconos/logo_png.png" />
-    <meta property="og:url" content="https://3daura.store/sorteo" />
-    <meta property="og:type" content="website" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="assets/images/iconos/logo_png_blanco.png" />
-    <script type="module" src="main.js"></script>
-  </head>
 
-  <body class="sorteo-page-body">
-    <div class="aura-backdrop" aria-hidden="true">
-      <span class="aura-orb aura-orb-a"></span>
-      <span class="aura-orb aura-orb-b"></span>
-      <span class="aura-orb aura-orb-c"></span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aura 3D ✨ | Sorteo Dellafuente</title>
+  <meta name="description"
+    content="Sorteo Dellafuente de Aura 3D x @lummerino en TikTok. Participa del 1 al 7 de junio y gana un azulejo Dellafuente a elegir o un cojín Dellafuente." />
+  <meta name="keywords" content="sorteo dellafuente, aura 3d, sorteo tiktok, azulejo dellafuente, cojin dellafuente" />
+  <meta name="author" content="Aura 3D" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#09090b" />
+  <link rel="canonical" href="https://3daura.store/sorteo" />
+  <meta property="og:title" content="Aura 3D x @lummerino | Sorteo Dellafuente" />
+  <meta property="og:description"
+    content="Participa del 1 al 7 de junio en el sorteo de TikTok y gana un azulejo Dellafuente a elegir o un cojín Dellafuente." />
+  <meta property="og:image" content="https://3daura.store/assets/images/iconos/logo_png.png" />
+  <meta property="og:url" content="https://3daura.store/sorteo" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="assets/images/iconos/logo_png_blanco.png" />
+  <script type="module" src="main.js"></script>
+</head>
+
+<body class="sorteo-page-body">
+  <div class="aura-backdrop" aria-hidden="true">
+    <span class="aura-orb aura-orb-a"></span>
+    <span class="aura-orb aura-orb-b"></span>
+    <span class="aura-orb aura-orb-c"></span>
+  </div>
+  <div class="site-noise" aria-hidden="true"></div>
+
+  <nav class="navbar" aria-label="Navegación principal">
+    <div class="container nav-content">
+      <div class="logo">
+        <a href="index.html" aria-label="Aura 3D inicio">
+          <img src="assets/images/iconos/logo_png_blanco.png" alt="Logotipo oficial de Aura 3D" class="logo-img" />
+        </a>
+      </div>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="index.html#experiencia">Clientes</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="galeria.html" class="nav-cta nav-cta-desktop"><i class="fas fa-images"></i><span>Catálogo</span></a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menú">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </div>
-    <div class="site-noise" aria-hidden="true"></div>
+  </nav>
 
-    <nav class="navbar" aria-label="Navegación principal">
-      <div class="container nav-content">
-        <div class="logo">
-          <a href="index.html" aria-label="Aura 3D inicio">
-            <img
-              src="assets/images/iconos/logo_png_blanco.png"
-              alt="Logotipo oficial de Aura 3D"
-              class="logo-img"
-            />
+  <header class="sorteo-hero">
+    <div class="sorteo-hero-orb sorteo-hero-orb-one" aria-hidden="true"></div>
+    <div class="sorteo-hero-orb sorteo-hero-orb-two" aria-hidden="true"></div>
+    <div class="container sorteo-hero-grid">
+      <div class="sorteo-hero-content fade-in visible">
+        <span class="tag">Sorteo en TikTok · 1 - 7 junio</span>
+        <p class="sorteo-eyebrow">Aura 3D x @lummerino</p>
+        <h1>Sorteo <span class="highlight">Dellafuente</span></h1>
+        <p class="sorteo-lead">
+          Participa, sigue los pasos y elige tu favorito si ganas. El sorteo está activo del
+          <strong>1 de junio al 7 de junio</strong>.
+        </p>
+
+        <div id="sorteo-status" class="sorteo-status" data-status="checking">
+          <span class="sorteo-status-dot"></span>
+          <div>
+            <strong>Comprobando fecha del sorteo...</strong>
+            <small id="sorteo-status-text">El sorteo funciona del 1 al 7 de junio.</small>
+          </div>
+        </div>
+
+        <div id="sorteo-countdown" class="sorteo-countdown" aria-live="polite">
+          <div class="sorteo-countdown-head">Calculando contador...</div>
+          <div class="sorteo-countdown-grid">
+            <span><strong id="sorteo-days">00</strong><small>Días</small></span>
+            <span><strong id="sorteo-hours">00</strong><small>Horas</small></span>
+            <span><strong id="sorteo-minutes">00</strong><small>Min</small></span>
+            <span><strong id="sorteo-seconds">00</strong><small>Seg</small></span>
+          </div>
+        </div>
+
+        <div class="sorteo-actions">
+          <a id="sorteo-participar-btn" href="https://www.tiktok.com/@lummerino" target="_blank"
+            rel="noopener noreferrer" class="btn-primary">
+            Participar en TikTok <i class="fab fa-tiktok"></i>
+          </a>
+          <a href="assets/docs/Sorteo_Dellafuente_TikTok_Aura3D_FINAL_RETOQUE_CUENTAS.pdf" target="_blank"
+            rel="noopener noreferrer" class="btn-outline">
+            Abrir bases en PDF <i class="fas fa-file-pdf"></i>
           </a>
         </div>
-
-        <ul class="nav-links" id="nav-links">
-          <li><a href="index.html#servicios">Servicios</a></li>
-          <li><a href="index.html#nosotros">Nosotros</a></li>
-          <li><a href="galeria.html">Galería</a></li>
-          <li><a href="index.html#experiencia">Clientes</a></li>
-          <li><a href="index.html#contacto">Contacto</a></li>
-        </ul>
-
-        <div class="nav-actions">
-          <a href="galeria.html" class="nav-cta nav-cta-desktop"><i class="fas fa-images"></i><span>Catálogo</span></a>
-          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar tema">
-            <i class="fas fa-moon"></i>
-          </button>
-          <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menú">
-            <i class="fas fa-bars"></i>
-          </button>
-        </div>
       </div>
-    </nav>
 
-    <header class="sorteo-hero">
-      <div class="sorteo-hero-orb sorteo-hero-orb-one" aria-hidden="true"></div>
-      <div class="sorteo-hero-orb sorteo-hero-orb-two" aria-hidden="true"></div>
-      <div class="container sorteo-hero-grid">
-        <div class="sorteo-hero-content fade-in visible">
-          <span class="tag">Sorteo en TikTok · 1 - 7 junio</span>
-          <p class="sorteo-eyebrow">Aura 3D x @lummerino</p>
-          <h1>Sorteo <span class="highlight">Dellafuente</span></h1>
-          <p class="sorteo-lead">
-            Participa, sigue los pasos y elige tu favorito si ganas. El sorteo está activo del
-            <strong>1 de junio al 7 de junio</strong>.
-          </p>
-
-          <div id="sorteo-status" class="sorteo-status" data-status="checking">
-            <span class="sorteo-status-dot"></span>
-            <div>
-              <strong>Comprobando fecha del sorteo...</strong>
-              <small id="sorteo-status-text">El sorteo funciona del 1 al 7 de junio.</small>
-            </div>
+      <div class="sorteo-prize-feature fade-in visible">
+        <article class="sorteo-prize-card sorteo-prize-card-large">
+          <span class="sorteo-prize-label">1er premio</span>
+          <img src="assets/images/azulejos/corales/corales_1.jpg" alt="Azulejo Dellafuente a elegir" loading="lazy" />
+          <div>
+            <h2>Azulejo a elegir</h2>
+            <p>El primer ganador recibirá 1 azulejo de Dellafuente a elegir entre los modelos del catálogo del sorteo.
+            </p>
           </div>
-
-          <div id="sorteo-countdown" class="sorteo-countdown" aria-live="polite">
-            <div class="sorteo-countdown-head">Calculando contador...</div>
-            <div class="sorteo-countdown-grid">
-              <span><strong id="sorteo-days">00</strong><small>Días</small></span>
-              <span><strong id="sorteo-hours">00</strong><small>Horas</small></span>
-              <span><strong id="sorteo-minutes">00</strong><small>Min</small></span>
-              <span><strong id="sorteo-seconds">00</strong><small>Seg</small></span>
-            </div>
+        </article>
+        <article class="sorteo-prize-card">
+          <span class="sorteo-prize-label">2º premio</span>
+          <div class="sorteo-img-wrap"
+            data-missing-label="Sube la imagen en assets/images/sorteo/cojin_dellafuente.jpg">
+            <img src="assets/images/sorteo/cojin_dellafuente.jpg" alt="Cojín Dellafuente" loading="lazy"
+              onerror="this.closest('.sorteo-img-wrap').classList.add('is-missing'); this.remove();" />
           </div>
-
-          <div class="sorteo-actions">
-            <a id="sorteo-participar-btn" href="https://www.tiktok.com/@lummerino" target="_blank" rel="noopener noreferrer" class="btn-primary">
-              Participar en TikTok <i class="fab fa-tiktok"></i>
-            </a>
-            <a href="assets/docs/Sorteo_Dellafuente_TikTok_Aura3D_FINAL_RETOQUE_CUENTAS.pdf" target="_blank" rel="noopener noreferrer" class="btn-outline">
-              Abrir bases en PDF <i class="fas fa-file-pdf"></i>
-            </a>
+          <div>
+            <h2>Cojín Dellafuente</h2>
+            <p>Premio asignado al segundo ganador del sorteo de TikTok.</p>
           </div>
+        </article>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-shell sorteo-section" id="premios">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="tag">Sorteo Dellafuente</span>
+          <h2>Premios del sorteo</h2>
+          <p>Dos premios claros para dos ganadores del sorteo.</p>
         </div>
 
-        <div class="sorteo-prize-feature fade-in visible">
-          <article class="sorteo-prize-card sorteo-prize-card-large">
+        <div class="sorteo-prizes-grid">
+          <article class="sorteo-info-card fade-in">
             <span class="sorteo-prize-label">1er premio</span>
-            <img src="assets/images/azulejos/corales/corales_1.jpg" alt="Azulejo Dellafuente a elegir" loading="lazy" />
-            <div>
-              <h2>Azulejo a elegir</h2>
-              <p>El primer ganador recibirá 1 azulejo de Dellafuente a elegir entre los modelos del catálogo del sorteo.</p>
-            </div>
+            <img src="assets/images/azulejos/corales/corales_1.jpg" alt="Azulejo Dellafuente" loading="lazy" />
+            <h3>Azulejo Dellafuente</h3>
+            <p>El ganador elige su favorito.</p>
+            <strong>Precio original: 20€</strong>
           </article>
-          <article class="sorteo-prize-card">
+
+          <article class="sorteo-info-card fade-in">
             <span class="sorteo-prize-label">2º premio</span>
-            <div class="sorteo-img-wrap" data-missing-label="Sube la imagen en assets/images/sorteo/cojin_dellafuente.jpg">
-              <img src="assets/images/sorteo/cojin_dellafuente.jpg" alt="Cojín Dellafuente" loading="lazy" onerror="this.closest('.sorteo-img-wrap').classList.add('is-missing'); this.remove();" />
+            <div class="sorteo-img-wrap"
+              data-missing-label="Sube la imagen en assets/images/sorteo/cojin_dellafuente.jpg">
+              <img src="assets/images/sorteo/cojin_dellafuente.jpg" alt="Cojín Dellafuente" loading="lazy"
+                onerror="this.closest('.sorteo-img-wrap').classList.add('is-missing'); this.remove();" />
             </div>
-            <div>
-              <h2>Cojín Dellafuente</h2>
-              <p>Premio asignado al segundo ganador del sorteo de TikTok.</p>
-            </div>
+            <h3>Cojín Dellafuente</h3>
+            <p>Segundo premio del sorteo.</p>
+          </article>
+        </div>
+
+        <div class="sorteo-note fade-in">
+          <h3>Importante</h3>
+          <p>
+            El primer ganador recibirá 1 azulejo de Dellafuente a elegir entre los modelos del catálogo del sorteo.
+            El segundo ganador recibirá el cojín Dellafuente mostrado en este documento. Los azulejos tienen un precio
+            original de 20€.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell section-muted sorteo-section" id="catalogo-premio">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="tag">Catálogo del primer premio</span>
+          <h2>Azulejos disponibles</h2>
+          <p>El primer ganador podrá elegir uno de estos modelos como premio.</p>
+          <a class="sorteo-inline-link" href="galeria.html">Catálogo completo en la web:
+            https://3daura.store/galeria</a>
+        </div>
+
+        <div class="sorteo-tiles-grid">
+          <article class="sorteo-tile fade-in"><img src="assets/images/azulejos/corales/corales_1.jpg"
+              alt="Azulejos de Corales" loading="lazy" />
+            <h3>Azulejos de Corales</h3><strong>20€</strong>
+          </article>
+          <article class="sorteo-tile fade-in"><img src="assets/images/azulejos/corales_rojo.jpg"
+              alt="Azulejos de Corales - Rojo" loading="lazy" />
+            <h3>Azulejos de Corales - Rojo</h3><strong>20€</strong>
+          </article>
+          <article class="sorteo-tile fade-in"><img src="assets/images/azulejos/casa_dellafuente.jpg"
+              alt="En esta casa se escucha Dellafuente" loading="lazy" />
+            <h3>En esta casa se escucha Dellafuente</h3><strong>20€</strong>
+          </article>
+          <article class="sorteo-tile fade-in"><img src="assets/images/azulejos/dellafuente_logo.jpg"
+              alt="DellafuenteFC Logo" loading="lazy" />
+            <h3>DellafuenteFC Logo</h3><strong>20€</strong>
+          </article>
+          <article class="sorteo-tile fade-in"><img
+              src="assets/images/productos/ansia-viva-dellafuente/img-9197-1777716635575-1.jpg" alt="Ansia Viva"
+              loading="lazy" />
+            <h3>Ansia Viva</h3><strong>20€</strong>
+          </article>
+          <article class="sorteo-tile fade-in"><img
+              src="assets/images/productos/13-18-dellafuente/img-9198-1777716682968-1.jpg" alt="13/18" loading="lazy" />
+            <h3>13/18</h3><strong>20€</strong>
+          </article>
+          <article class="sorteo-tile fade-in"><img
+              src="assets/images/productos/milagro-dellafuente/img-9338-1777716970537-1.jpg" alt="Milagro"
+              loading="lazy" />
+            <h3>Milagro</h3><strong>20€</strong>
+          </article>
+          <article class="sorteo-tile fade-in"><img
+              src="assets/images/productos/cuentamelo-dellafuente/img-9336-1777717072734-1.jpg" alt="Cuéntamelo"
+              loading="lazy" />
+            <h3>Cuéntamelo</h3><strong>20€</strong>
+          </article>
+          <article class="sorteo-tile fade-in"><img
+              src="assets/images/productos/ya-no-te-veo-dellafuente/img-9881-1779396351335-1.jpg" alt="Ya No Te Veo"
+              loading="lazy" />
+            <h3>Ya No Te Veo</h3><strong>20€</strong>
           </article>
         </div>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <section class="section-shell sorteo-section" id="premios">
-        <div class="container">
-          <div class="section-header fade-in">
-            <span class="tag">Sorteo Dellafuente</span>
-            <h2>Premios del sorteo</h2>
-            <p>Dos premios claros para dos ganadores del sorteo.</p>
-          </div>
-
-          <div class="sorteo-prizes-grid">
-            <article class="sorteo-info-card fade-in">
-              <span class="sorteo-prize-label">1er premio</span>
-              <img src="assets/images/azulejos/corales/corales_1.jpg" alt="Azulejo Dellafuente" loading="lazy" />
-              <h3>Azulejo Dellafuente</h3>
-              <p>El ganador elige su favorito.</p>
-              <strong>Precio original: 20€</strong>
-            </article>
-
-            <article class="sorteo-info-card fade-in">
-              <span class="sorteo-prize-label">2º premio</span>
-              <div class="sorteo-img-wrap" data-missing-label="Sube la imagen en assets/images/sorteo/cojin_dellafuente.jpg">
-                <img src="assets/images/sorteo/cojin_dellafuente.jpg" alt="Cojín Dellafuente" loading="lazy" onerror="this.closest('.sorteo-img-wrap').classList.add('is-missing'); this.remove();" />
-              </div>
-              <h3>Cojín Dellafuente</h3>
-              <p>Segundo premio del sorteo.</p>
-            </article>
-          </div>
-
-          <div class="sorteo-note fade-in">
-            <h3>Importante</h3>
-            <p>
-              El primer ganador recibirá 1 azulejo de Dellafuente a elegir entre los modelos del catálogo del sorteo.
-              El segundo ganador recibirá el cojín Dellafuente mostrado en este documento. Los azulejos tienen un precio original de 20€.
-            </p>
-          </div>
+    <section class="section-shell sorteo-section" id="como-participar">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="tag">Requisitos del sorteo</span>
+          <h2>Cómo participar</h2>
+          <p>Para que la participación sea válida deben cumplirse todos los pasos. Periodo de participación: del 1 de
+            junio al 7 de junio.</p>
         </div>
-      </section>
 
-      <section class="section-shell section-muted sorteo-section" id="catalogo-premio">
-        <div class="container">
-          <div class="section-header fade-in">
-            <span class="tag">Catálogo del primer premio</span>
-            <h2>Azulejos disponibles</h2>
-            <p>El primer ganador podrá elegir uno de estos modelos como premio.</p>
-            <a class="sorteo-inline-link" href="galeria.html">Catálogo completo en la web: https://3daura.store/galeria</a>
-          </div>
-
-          <div class="sorteo-tiles-grid">
-            <article class="sorteo-tile fade-in"><img src="assets/images/azulejos/corales/corales_1.jpg" alt="Azulejos de Corales" loading="lazy" /><h3>Azulejos de Corales</h3><strong>20€</strong></article>
-            <article class="sorteo-tile fade-in"><img src="assets/images/azulejos/corales_rojo.jpg" alt="Azulejos de Corales - Rojo" loading="lazy" /><h3>Azulejos de Corales - Rojo</h3><strong>20€</strong></article>
-            <article class="sorteo-tile fade-in"><img src="assets/images/azulejos/casa_dellafuente.jpg" alt="En esta casa se escucha Dellafuente" loading="lazy" /><h3>En esta casa se escucha Dellafuente</h3><strong>20€</strong></article>
-            <article class="sorteo-tile fade-in"><img src="assets/images/azulejos/dellafuente_logo.jpg" alt="DellafuenteFC Logo" loading="lazy" /><h3>DellafuenteFC Logo</h3><strong>20€</strong></article>
-            <article class="sorteo-tile fade-in"><img src="assets/images/productos/ansia-viva-dellafuente/img-9197-1777716635575-1.jpg" alt="Ansia Viva" loading="lazy" /><h3>Ansia Viva</h3><strong>20€</strong></article>
-            <article class="sorteo-tile fade-in"><img src="assets/images/productos/13-18-dellafuente/img-9198-1777716682968-1.jpg" alt="13/18" loading="lazy" /><h3>13/18</h3><strong>20€</strong></article>
-            <article class="sorteo-tile fade-in"><img src="assets/images/productos/milagro-dellafuente/img-9338-1777716970537-1.jpg" alt="Milagro" loading="lazy" /><h3>Milagro</h3><strong>20€</strong></article>
-            <article class="sorteo-tile fade-in"><img src="assets/images/productos/cuentamelo-dellafuente/img-9336-1777717072734-1.jpg" alt="Cuéntamelo" loading="lazy" /><h3>Cuéntamelo</h3><strong>20€</strong></article>
-            <article class="sorteo-tile fade-in"><img src="assets/images/productos/ya-no-te-veo-dellafuente/img-9881-1779396351335-1.jpg" alt="Ya No Te Veo" loading="lazy" /><h3>Ya No Te Veo</h3><strong>20€</strong></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-shell sorteo-section" id="como-participar">
-        <div class="container">
-          <div class="section-header fade-in">
-            <span class="tag">Requisitos del sorteo</span>
-            <h2>Cómo participar</h2>
-            <p>Para que la participación sea válida deben cumplirse todos los pasos. Periodo de participación: del 1 de junio al 7 de junio.</p>
-          </div>
-
-          <div class="sorteo-steps-grid">
-            <article class="sorteo-step fade-in"><strong>01</strong><h3>Seguir en TikTok e Instagram</h3><p>Seguir a @3daura y @lummerino en TikTok e Instagram.</p></article>
-            <article class="sorteo-step fade-in"><strong>02</strong><h3>Dar like</h3><p>Dar like a la publicación oficial del sorteo.</p></article>
-            <article class="sorteo-step fade-in"><strong>03</strong><h3>Comentar</h3><p>Comentar mencionando a 2 amigos.</p></article>
-            <article class="sorteo-step fade-in"><strong>04</strong><h3>Compartir</h3><p>Compartir la publicación con el botón amarillo de compartir en el perfil, no enviarla solo a una persona por privado.</p></article>
-          </div>
-
-          <div class="sorteo-note fade-in">
-            <h3>Participaciones extra</h3>
-            <p>
-              Los participantes podrán comentar varias veces siempre que mencionen a personas diferentes. No cuentan comentarios repetidos ni menciones no válidas.
-            </p>
-            <p>
-              Nota: el vídeo oficial del sorteo estará en el TikTok de @lummerino, pero para participar hay que seguir a @3daura y @lummerino tanto en TikTok como en Instagram.
-            </p>
+        <div class="sorteo-steps-grid">
+          <article class="sorteo-step fade-in"><strong>01</strong>
             <h3>Seguir en TikTok e Instagram</h3>
             <p>Seguir a @3daura y @lummerino en TikTok e Instagram.</p>
-          </div>
+          </article>
+          <article class="sorteo-step fade-in"><strong>02</strong>
+            <h3>Dar like</h3>
+            <p>Dar like a la publicación oficial del sorteo.</p>
+          </article>
+          <article class="sorteo-step fade-in"><strong>03</strong>
+            <h3>Comentar</h3>
+            <p>Comentar mencionando a 2 amigos.</p>
+          </article>
+          <article class="sorteo-step fade-in"><strong>04</strong>
+            <h3>Compartir</h3>
+            <p>Compartir la publicación con el botón amarillo de compartir en el perfil, no enviarla solo a una persona
+              por privado.</p>
+          </article>
         </div>
-      </section>
 
-      <section class="section-shell section-muted sorteo-section" id="bases">
-        <div class="container">
-          <div class="section-header fade-in">
-            <span class="tag">Bases y condiciones</span>
-            <h2>Participaciones válidas</h2>
-            <p>Condiciones principales para mantener el sorteo limpio y transparente.</p>
-          </div>
-
-          <div class="sorteo-rules-grid">
-            <article class="sorteo-rule fade-in"><h3>Participaciones no válidas</h3><p>No se tendrán en cuenta cuentas falsas, bots, cuentas creadas solo para sorteos o comentarios con menciones repetidas.</p></article>
-            <article class="sorteo-rule fade-in"><h3>Duración del sorteo</h3><p>El sorteo estará activo desde el 1 de junio hasta el 7 de junio. Una vez finalizado el plazo de participación, se cerrará la recogida de comentarios.</p></article>
-            <article class="sorteo-rule fade-in"><h3>Elección del ganador</h3><p>El ganador se elegirá de forma aleatoria mediante una aplicación o herramienta de sorteos compatible con comentarios de TikTok. Para que el proceso sea transparente, se recomienda grabar la pantalla mientras se realiza el sorteo.</p></article>
-            <article class="sorteo-rule fade-in"><h3>Comprobación previa</h3><p>Antes de anunciar al ganador, comprobaremos que cumple todos los requisitos: que sigue a ambas cuentas en TikTok e Instagram, que ha comentado correctamente y que ha compartido la publicación en su perfil con el botón amarillo de compartir.</p></article>
-          </div>
+        <div class="sorteo-note fade-in">
+          <h3>Participaciones extra</h3>
+          <p>
+            Los participantes podrán comentar varias veces siempre que mencionen a personas diferentes. No cuentan
+            comentarios repetidos ni menciones no válidas.
+          </p>
+          <p>
+            Nota: el vídeo oficial del sorteo estará en el TikTok de @lummerino, pero para participar hay que seguir a
+            @3daura y @lummerino tanto en TikTok como en Instagram.
+          </p>
+          <h3>Seguir en TikTok e Instagram</h3>
+          <p>Seguir a @3daura y @lummerino en TikTok e Instagram.</p>
         </div>
-      </section>
-
-      <section class="section-shell sorteo-section" id="gestion-premio">
-        <div class="container">
-          <div class="section-header fade-in">
-            <span class="tag">Gestión del premio</span>
-            <h2>Ganadores, contacto y envío</h2>
-            <p>Proceso final cuando termine el sorteo.</p>
-          </div>
-
-          <div class="sorteo-final-card fade-in">
-            <div>
-              <h3>Anuncio y contacto</h3>
-              <p>Una vez confirmado cada ganador, se anunciará en las redes de las cuentas organizadoras y se contactará por mensaje privado. El primer ganador deberá indicar qué azulejo quiere elegir y facilitar los datos necesarios para gestionar el envío.</p>
-            </div>
-            <div>
-              <h3>Envío</h3>
-              <p>El envío se puede plantear como incluido para España peninsular. En caso de que el ganador sea de Baleares, Canarias, Ceuta, Melilla o fuera de España, se revisará el coste del envío antes de gestionarlo.</p>
-            </div>
-            <div>
-              <h3>Resumen</h3>
-              <p>El sorteo funciona de forma sencilla: los usuarios participan siguiendo los pasos indicados, al finalizar se eligen los ganadores de forma aleatoria, se comprueba que cumplen los requisitos y se gestionan los premios.</p>
-            </div>
-            <div>
-              <h3>Catálogo completo</h3>
-              <p>Para ver todo el catálogo disponible de Aura 3D, se puede consultar la galería de la web: https://3daura.store/galeria</p>
-            </div>
-            <div>
-              <h3>Aviso de plataforma</h3>
-              <p>Este sorteo no está patrocinado, administrado ni asociado oficialmente a TikTok. Las cuentas organizadoras son Aura 3D y @lummerino.</p>
-            </div>
-          </div>
-
-          <div class="sorteo-bottom-actions fade-in">
-            <a id="sorteo-participar-btn-bottom" href="https://www.tiktok.com/@lummerino" target="_blank" rel="noopener noreferrer" class="btn-primary">Ir al sorteo en TikTok <i class="fab fa-tiktok"></i></a>
-            <a href="galeria.html" class="btn-outline">Ver catálogo completo <i class="fas fa-images"></i></a>
-            <a href="assets/docs/Sorteo_Dellafuente_TikTok_Aura3D_FINAL_RETOQUE_CUENTAS.pdf" target="_blank" rel="noopener noreferrer" class="btn-outline">Abrir PDF completo <i class="fas fa-file-pdf"></i></a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="container">
-        <h3>Aura<span class="highlight">3D</span></h3>
-        <div class="socials">
-          <a href="https://www.tiktok.com/@3daura" target="_blank" rel="noopener noreferrer" aria-label="TikTok Aura 3D" title="TikTok"><i class="fab fa-tiktok"></i></a>
-          <a href="https://www.instagram.com/3daura_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Aura 3D" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="mailto:3daurainfo@gmail.com" aria-label="Email Aura 3D" title="Email"><i class="fas fa-envelope"></i></a>
-        </div>
-        <p class="footer-text">&copy; 2026 Aura 3D. Diseñado con pasión.</p>
       </div>
-    </footer>
+    </section>
 
-    <button id="scrollTopBtn" type="button" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
-    <script>
-      (() => {
-        const start = new Date("2026-06-01T00:00:00+02:00").getTime();
-        const end = new Date("2026-06-08T00:00:00+02:00").getTime();
-        const status = document.getElementById("sorteo-status");
-        const statusText = document.getElementById("sorteo-status-text");
-        const countdown = document.getElementById("sorteo-countdown");
-        const countdownHead = countdown?.querySelector(".sorteo-countdown-head");
-        const daysEl = document.getElementById("sorteo-days");
-        const hoursEl = document.getElementById("sorteo-hours");
-        const minutesEl = document.getElementById("sorteo-minutes");
-        const secondsEl = document.getElementById("sorteo-seconds");
-        const buttons = [
-          document.getElementById("sorteo-participar-btn"),
-          document.getElementById("sorteo-participar-btn-bottom"),
-        ].filter(Boolean);
+    <section class="section-shell section-muted sorteo-section" id="bases">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="tag">Bases y condiciones</span>
+          <h2>Participaciones válidas</h2>
+          <p>Condiciones principales para mantener el sorteo limpio y transparente.</p>
+        </div>
 
-        const preventDisabledClick = (event) => event.preventDefault();
-        const pad = (value) => String(value).padStart(2, "0");
+        <div class="sorteo-rules-grid">
+          <article class="sorteo-rule fade-in">
+            <h3>Participaciones no válidas</h3>
+            <p>No se tendrán en cuenta cuentas falsas, bots, cuentas creadas solo para sorteos o comentarios con
+              menciones repetidas.</p>
+          </article>
+          <article class="sorteo-rule fade-in">
+            <h3>Duración del sorteo</h3>
+            <p>El sorteo estará activo desde el 1 de junio hasta el 7 de junio. Una vez finalizado el plazo de
+              participación, se cerrará la recogida de comentarios.</p>
+          </article>
+          <article class="sorteo-rule fade-in">
+            <h3>Elección del ganador</h3>
+            <p>El ganador se elegirá de forma aleatoria mediante una aplicación o herramienta de sorteos compatible con
+              comentarios de TikTok. Para que el proceso sea transparente, se recomienda grabar la pantalla mientras se
+              realiza el sorteo.</p>
+          </article>
+          <article class="sorteo-rule fade-in">
+            <h3>Comprobación previa</h3>
+            <p>Antes de anunciar al ganador, comprobaremos que cumple todos los requisitos: que sigue a ambas cuentas en
+              TikTok e Instagram, que ha comentado correctamente y que ha compartido la publicación en su perfil con el
+              botón amarillo de compartir.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        const getParts = (ms) => {
-          const total = Math.max(0, Math.floor(ms / 1000));
-          const days = Math.floor(total / 86400);
-          const hours = Math.floor((total % 86400) / 3600);
-          const minutes = Math.floor((total % 3600) / 60);
-          const seconds = total % 60;
-          return { days, hours, minutes, seconds };
-        };
+    <section class="section-shell sorteo-section" id="gestion-premio">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="tag">Gestión del premio</span>
+          <h2>Ganadores, contacto y envío</h2>
+          <p>Proceso final cuando termine el sorteo.</p>
+        </div>
 
-        const renderCountdown = (ms, title) => {
-          const parts = getParts(ms);
-          if (countdownHead) countdownHead.textContent = title;
-          if (daysEl) daysEl.textContent = pad(parts.days);
-          if (hoursEl) hoursEl.textContent = pad(parts.hours);
-          if (minutesEl) minutesEl.textContent = pad(parts.minutes);
-          if (secondsEl) secondsEl.textContent = pad(parts.seconds);
-          countdown?.classList.remove("is-ended");
-          return parts;
-        };
+        <div class="sorteo-final-card fade-in">
+          <div>
+            <h3>Anuncio y contacto</h3>
+            <p>Una vez confirmado cada ganador, se anunciará en las redes de las cuentas organizadoras y se contactará
+              por mensaje privado. El primer ganador deberá indicar qué azulejo quiere elegir y facilitar los datos
+              necesarios para gestionar el envío.</p>
+          </div>
+          <div>
+            <h3>Envío</h3>
+            <p>El envío se puede plantear como incluido para España peninsular. En caso de que el ganador sea de
+              Baleares, Canarias, Ceuta, Melilla o fuera de España, se revisará el coste del envío antes de gestionarlo.
+            </p>
+          </div>
+          <div>
+            <h3>Resumen</h3>
+            <p>El sorteo funciona de forma sencilla: los usuarios participan siguiendo los pasos indicados, al finalizar
+              se eligen los ganadores de forma aleatoria, se comprueba que cumplen los requisitos y se gestionan los
+              premios.</p>
+          </div>
+          <div>
+            <h3>Catálogo completo</h3>
+            <p>Para ver todo el catálogo disponible de Aura 3D, se puede consultar la galería de la web:
+              https://3daura.store/galeria</p>
+          </div>
+          <div>
+            <h3>Aviso de plataforma</h3>
+            <p>Este sorteo no está patrocinado, administrado ni asociado oficialmente a TikTok. Las cuentas
+              organizadoras son Aura 3D y @lummerino.</p>
+          </div>
+        </div>
 
-        const setButtons = (enabled, label) => {
-          buttons.forEach((button) => {
-            button.classList.toggle("is-disabled", !enabled);
-            button.setAttribute("aria-disabled", enabled ? "false" : "true");
-            if (!enabled) button.addEventListener("click", preventDisabledClick);
-            else button.removeEventListener("click", preventDisabledClick);
-            if (label) button.innerHTML = label;
-          });
-        };
+        <div class="sorteo-bottom-actions fade-in">
+          <a id="sorteo-participar-btn-bottom" href="https://www.tiktok.com/@lummerino" target="_blank"
+            rel="noopener noreferrer" class="btn-primary">Ir al sorteo en TikTok <i class="fab fa-tiktok"></i></a>
+          <a href="galeria.html" class="btn-outline">Ver catálogo completo <i class="fas fa-images"></i></a>
+          <a href="assets/docs/Sorteo_Dellafuente_TikTok_Aura3D_FINAL_RETOQUE_CUENTAS.pdf" target="_blank"
+            rel="noopener noreferrer" class="btn-outline">Abrir PDF completo <i class="fas fa-file-pdf"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        const update = () => {
-          if (!status || !statusText) return;
-          const now = Date.now();
+  <footer>
+    <div class="container">
+      <h3>Aura<span class="highlight">3D</span></h3>
+      <div class="socials">
+        <a href="https://www.tiktok.com/@3daura" target="_blank" rel="noopener noreferrer" aria-label="TikTok Aura 3D"
+          title="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.instagram.com/3daura_/" target="_blank" rel="noopener noreferrer"
+          aria-label="Instagram Aura 3D" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:3daurainfo@gmail.com" aria-label="Email Aura 3D" title="Email"><i
+            class="fas fa-envelope"></i></a>
+      </div>
+      <p class="footer-text">&copy; 2026 Aura 3D. Diseñado con pasión.</p>
+    </div>
+  </footer>
 
-          if (now < start) {
-            status.dataset.status = "upcoming";
-            status.querySelector("strong").textContent = "El sorteo empieza el 1 de junio";
-            const parts = renderCountdown(start - now, "Queda para que empiece el sorteo");
-            statusText.textContent = `Faltan ${parts.days} días, ${parts.hours} horas, ${parts.minutes} minutos y ${parts.seconds} segundos. Periodo activo: del 1 al 7 de junio.`;
-            setButtons(false, 'Disponible el 1 de junio <i class="fas fa-clock"></i>');
-            return;
-          }
+  <button id="scrollTopBtn" type="button" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
+  <script>
+    (() => {
+      const start = new Date("2026-06-01T00:00:00+02:00").getTime();
+      const end = new Date("2026-06-08T00:00:00+02:00").getTime();
+      const status = document.getElementById("sorteo-status");
+      const statusText = document.getElementById("sorteo-status-text");
+      const countdown = document.getElementById("sorteo-countdown");
+      const countdownHead = countdown?.querySelector(".sorteo-countdown-head");
+      const daysEl = document.getElementById("sorteo-days");
+      const hoursEl = document.getElementById("sorteo-hours");
+      const minutesEl = document.getElementById("sorteo-minutes");
+      const secondsEl = document.getElementById("sorteo-seconds");
+      const buttons = [
+        document.getElementById("sorteo-participar-btn"),
+        document.getElementById("sorteo-participar-btn-bottom"),
+      ].filter(Boolean);
 
-          if (now >= start && now < end) {
-            status.dataset.status = "active";
-            status.querySelector("strong").textContent = "Sorteo activo ahora";
-            const parts = renderCountdown(end - now, "Queda para que finalice el sorteo");
-            statusText.textContent = `Participa antes de que termine. Quedan ${parts.days} días, ${parts.hours} horas, ${parts.minutes} minutos y ${parts.seconds} segundos.`;
-            setButtons(true, 'Participar en TikTok <i class="fab fa-tiktok"></i>');
-            return;
-          }
+      const preventDisabledClick = (event) => event.preventDefault();
+      const pad = (value) => String(value).padStart(2, "0");
 
-          status.dataset.status = "ended";
-          status.querySelector("strong").textContent = "Sorteo finalizado";
-          statusText.textContent = "El periodo de participación fue del 1 al 7 de junio. Puedes consultar las bases y el catálogo igualmente.";
-          renderCountdown(0, "Sorteo finalizado");
-          countdown?.classList.add("is-ended");
-          setButtons(false, 'Sorteo finalizado <i class="fas fa-lock"></i>');
-        };
+      const getParts = (ms) => {
+        const total = Math.max(0, Math.floor(ms / 1000));
+        const days = Math.floor(total / 86400);
+        const hours = Math.floor((total % 86400) / 3600);
+        const minutes = Math.floor((total % 3600) / 60);
+        const seconds = total % 60;
+        return { days, hours, minutes, seconds };
+      };
 
-        update();
-        window.setInterval(update, 1000);
-      })();
-    </script>
-  </body>
+      const renderCountdown = (ms, title) => {
+        const parts = getParts(ms);
+        if (countdownHead) countdownHead.textContent = title;
+        if (daysEl) daysEl.textContent = pad(parts.days);
+        if (hoursEl) hoursEl.textContent = pad(parts.hours);
+        if (minutesEl) minutesEl.textContent = pad(parts.minutes);
+        if (secondsEl) secondsEl.textContent = pad(parts.seconds);
+        countdown?.classList.remove("is-ended");
+        return parts;
+      };
+
+      const setButtons = (enabled, label) => {
+        buttons.forEach((button) => {
+          button.classList.toggle("is-disabled", !enabled);
+          button.setAttribute("aria-disabled", enabled ? "false" : "true");
+          if (!enabled) button.addEventListener("click", preventDisabledClick);
+          else button.removeEventListener("click", preventDisabledClick);
+          if (label) button.innerHTML = label;
+        });
+      };
+
+      const update = () => {
+        if (!status || !statusText) return;
+        const now = Date.now();
+
+        if (now < start) {
+          status.dataset.status = "upcoming";
+          status.querySelector("strong").textContent = "El sorteo empieza el 1 de junio";
+          const parts = renderCountdown(start - now, "Queda para que empiece el sorteo");
+          statusText.textContent = `Faltan ${parts.days} días, ${parts.hours} horas, ${parts.minutes} minutos y ${parts.seconds} segundos. Periodo activo: del 1 al 7 de junio.`;
+          setButtons(false, 'Disponible el 1 de junio <i class="fas fa-clock"></i>');
+          return;
+        }
+
+        if (now >= start && now < end) {
+          status.dataset.status = "active";
+          status.querySelector("strong").textContent = "Sorteo activo ahora";
+          const parts = renderCountdown(end - now, "Queda para que finalice el sorteo");
+          statusText.textContent = `Participa antes de que termine. Quedan ${parts.days} días, ${parts.hours} horas, ${parts.minutes} minutos y ${parts.seconds} segundos.`;
+          setButtons(true, 'Participar en TikTok <i class="fab fa-tiktok"></i>');
+          return;
+        }
+
+        status.dataset.status = "ended";
+        status.querySelector("strong").textContent = "Sorteo finalizado";
+        statusText.textContent = "El periodo de participación fue del 1 al 7 de junio. Puedes consultar las bases y el catálogo igualmente.";
+        renderCountdown(0, "Sorteo finalizado");
+        countdown?.classList.add("is-ended");
+        setButtons(false, 'Sorteo finalizado <i class="fas fa-lock"></i>');
+      };
+
+      update();
+      window.setInterval(update, 1000);
+    })();
+  </script>
+</body>
+
 </html>

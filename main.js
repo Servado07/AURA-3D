@@ -176,7 +176,10 @@ function initScrollTop() {
   if (!scrollTopBtn) return;
 
   const currentScrollY = () =>
-    window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    window.scrollY ||
+    document.documentElement.scrollTop ||
+    document.body.scrollTop ||
+    0;
 
   const update = () => {
     const shouldShow = currentScrollY() > 320;
@@ -878,7 +881,8 @@ function initRuleta() {
   function renderCooldownMessage({ prize = "", afterSpin = false } = {}) {
     if (!resultBox) return;
 
-    const prizeText = prize || localStorage.getItem(lastPrizeKey) || "tu última tirada";
+    const prizeText =
+      prize || localStorage.getItem(lastPrizeKey) || "tu última tirada";
     ruletaForm.style.display = "none";
     resultBox.style.display = "block";
     resultBox.innerHTML = `
@@ -1341,7 +1345,6 @@ function initCatalogLightboxNavigation() {
     if (event.key === "ArrowRight") navigate(1);
   });
 }
-
 
 function initCatalogToolbarAutoHide() {
   const toolbar = document.querySelector(".catalog-toolbar-wrap");
