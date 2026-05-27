@@ -1514,7 +1514,7 @@ function initAuraChatbot() {
   const defaultMessage = {
     role: "assistant",
     content:
-      "¡Hola! Soy AuraBot ✨ Cuéntame qué estás buscando y te oriento con ideas, catálogo, encargos, regalos, tiempos o presupuestos de Aura 3D.",
+      "¡Hola! Soy AuraBot ✨\n\nCuéntame qué estás buscando y te oriento con ideas, catálogo, encargos, regalos, tiempos, presupuestos o el sorteo Dellafuente.",
   };
 
   const saveHistory = () => {
@@ -1873,9 +1873,9 @@ ${stringifyList(knowledge.responseRules || [])}
       links.cults && "Cults3D",
     ].filter(Boolean);
     const platformsText = platforms.length
-      ? ` Si te interesa, puedes verlo o pedirlo mediante ${platforms.join(", ")}, o escribirnos para personalizarlo.`
-      : " Si te interesa, podemos orientarte por el formulario, Instagram o email para ver presupuesto, tamaño y disponibilidad.";
-    return `Sí, tenemos ${matched.title}, dentro de ${category}.${description}${platformsText} También podemos adaptar la idea en tamaño, color o acabado según lo que busques.`;
+      ? `📲 Puedes verlo o pedirlo mediante ${platforms.join(", ")}, o escribirnos para personalizarlo.`
+      : "📲 Si te interesa, podemos orientarte por el formulario, Instagram o email para ver presupuesto, tamaño y disponibilidad.";
+    return `Sí, tenemos ${matched.title} ✨\n\n🧩 Sección: ${category}.${description}\n${platformsText}\n🎨 También podemos adaptar la idea en tamaño, color o acabado según lo que busques.`;
   };
 
   const recommendationAnswer = async (q) => {
@@ -1903,7 +1903,7 @@ ${stringifyList(knowledge.responseRules || [])}
         4,
       );
       const names = productNames(products);
-      return `Para niños yo iría a algo personalizado y llamativo: un funko inspirado en su mascota o personaje favorito, una figura sencilla decorativa o una placa con su nombre. ${names ? `Del catálogo te pueden encajar: ${names}.` : ""} Si es para un peque muy pequeño, mejor tratarlo como decoración y evitar piezas pequeñas sueltas. ¿Qué edad tiene y qué le gusta?`;
+      return `Para niños yo iría a algo personalizado y llamativo 🎁\n\n✨ Un funko inspirado en su mascota o personaje favorito.\n🧩 Una figura sencilla decorativa o una placa con su nombre.${names ? `\n👀 Del catálogo te pueden encajar: ${names}.` : ""}\n\nSi es para un peque muy pequeño, mejor tratarlo como decoración y evitar piezas pequeñas sueltas. ¿Qué edad tiene y qué le gusta?`;
     }
 
     if (
@@ -1926,7 +1926,7 @@ ${stringifyList(knowledge.responseRules || [])}
         5,
       );
       const names = productNames(products);
-      return `De música lo más chulo son los azulejos decorativos y piezas tipo portada/frase. ${names ? `Ahora mismo te pueden encajar: ${names}.` : "Podemos hacer una placa o azulejo inspirado en una portada, frase o artista."} Queda muy bien para decorar una habitación, estudio o como regalo. ¿Lo quieres para ti o para regalar?`;
+      return `De música lo más chulo son los azulejos decorativos y piezas tipo portada/frase 🎵\n\n${names ? `🧩 Ahora mismo te pueden encajar: ${names}.` : "🧩 Podemos hacer una placa o azulejo inspirado en una portada, frase o artista."}\n✨ Queda muy bien para decorar una habitación, estudio o como regalo.\n\n¿Lo quieres para ti o para regalar?`;
     }
 
     if (hasAny(q, ["mascota", "perro", "gato", "animal", "peludo", "peluda"])) {
@@ -1935,7 +1935,7 @@ ${stringifyList(knowledge.responseRules || [])}
         4,
       );
       const names = productNames(products);
-      return `Para mascotas tenemos dos opciones que suelen gustar mucho: un busto personalizado si quieres algo elegante, o un funko de mascota si prefieres algo más divertido. ${names ? `En catálogo puedes ver ideas como ${names}.` : ""} Lo ideal es enviarnos fotos claras de frente y perfil, tamaño aproximado y si lo quieres Raw o Premium.`;
+      return `Para mascotas tenemos dos opciones que suelen gustar mucho 🐾\n\n✨ Un busto personalizado si quieres algo elegante.\n🎁 Un funko de mascota si prefieres algo más divertido.${names ? `\n👀 En catálogo puedes ver ideas como ${names}.` : ""}\n\nLo ideal es enviarnos fotos claras de frente y perfil, tamaño aproximado y si lo quieres Raw o Premium.`;
     }
 
     if (
@@ -1954,7 +1954,7 @@ ${stringifyList(knowledge.responseRules || [])}
         5,
       );
       const names = productNames(products);
-      return `Para regalo, lo mejor es personalizarlo un poco para que tenga sentido para esa persona. ${names ? `Ideas que pueden funcionar: ${names}.` : "Podemos hacer bustos, funkos, azulejos o piezas decorativas a medida."} Si me dices para quién es y qué le gusta, te recomiendo algo más afinado.`;
+      return `Para regalo, lo mejor es personalizarlo un poco para que tenga sentido para esa persona 🎁\n\n${names ? `✨ Ideas que pueden funcionar: ${names}.` : "✨ Podemos hacer bustos, funkos, azulejos o piezas decorativas a medida."}\n🧡 Cuanto más conecte con sus gustos, más especial queda.\n\nSi me dices para quién es y qué le gusta, te recomiendo algo más afinado.`;
     }
 
     if (
@@ -1976,7 +1976,7 @@ ${stringifyList(knowledge.responseRules || [])}
         5,
       );
       const names = productNames(products);
-      return `Si buscas algo de terror o colección, miraría piezas tipo ${names || "FNAF, Vecna Chibi o Demogorgon"}. Funcionan muy bien como decoración para escritorio, estantería o regalo fan. ¿Prefieres algo más chibi/decorativo o una figura más de colección?`;
+      return `Si buscas algo de terror o colección, yo miraría piezas con presencia 👀\n\n🧩 Opciones tipo: ${names || "FNAF, Vecna Chibi o Demogorgon"}.\n✨ Funcionan muy bien para escritorio, estantería o regalo fan.\n\n¿Prefieres algo más chibi/decorativo o una figura más de colección?`;
     }
 
     return "";
@@ -1988,14 +1988,14 @@ ${stringifyList(knowledge.responseRules || [])}
     const now = Date.now();
 
     if (now < start) {
-      return "El sorteo empieza el 1 de junio de 2026 y estará abierto hasta el 7 de junio de 2026.";
+      return "⏱️ El sorteo empieza el 1 de junio de 2026 y estará abierto hasta el 7 de junio de 2026.";
     }
 
     if (now >= start && now < end) {
-      return "El sorteo está activo ahora mismo y puedes participar hasta el 7 de junio de 2026.";
+      return "🏆 El sorteo está activo ahora mismo y puedes participar hasta el 7 de junio de 2026.";
     }
 
-    return "El sorteo ya finalizó: el periodo de participación fue del 1 al 7 de junio de 2026.";
+    return "🔒 El sorteo ya finalizó: el periodo de participación fue del 1 al 7 de junio de 2026.";
   };
 
   const giveawayAnswer = (q) => {
@@ -2007,18 +2007,18 @@ ${stringifyList(knowledge.responseRules || [])}
     if (!mentionsGiveaway) return "";
 
     if (hasAny(q, ["premio", "premios", "gana", "ganar", "sortea", "sortean"])) {
-      return "En el sorteo Dellafuente hay dos premios: el 1er ganador se lleva un azulejo Dellafuente a elegir entre los modelos del catálogo del sorteo, y el 2º ganador se lleva el cojín Dellafuente. Los azulejos del sorteo tienen precio original de 20€.";
+      return "En el sorteo Dellafuente hay dos premios 🏆\n\n🥇 1er ganador: azulejo Dellafuente a elegir entre los modelos del catálogo del sorteo.\n🥈 2º ganador: cojín Dellafuente.\n\nLos azulejos del sorteo tienen precio original de 20€.";
     }
 
     if (hasAny(q, ["fecha", "cuando", "cuándo", "hasta", "empieza", "termina", "activo", "finaliza"])) {
-      return `${getGiveawayStatusText()} En la página del sorteo puedes ver el contador y abrir las bases completas en PDF.`;
+      return `${getGiveawayStatusText()}\n\n📄 En la página del sorteo puedes ver el contador y abrir las bases completas en PDF.`;
     }
 
     if (hasAny(q, ["ganador", "ganadores", "resultado", "resultados", "elegir", "aleatorio"])) {
-      return "Los ganadores del sorteo Dellafuente se elegirán de forma aleatoria con una herramienta compatible con comentarios de TikTok. Antes de anunciarlos comprobaremos que cumplen los requisitos: seguir a ambas cuentas en TikTok e Instagram, comentar correctamente, dar like y compartir la publicación.";
+      return "Los ganadores del sorteo Dellafuente se elegirán de forma aleatoria 🏆\n\n📲 Usaremos una herramienta compatible con comentarios de TikTok.\n✅ Antes de anunciarlos comprobaremos que cumplen todos los requisitos.\n👀 Revisaremos que sigan a ambas cuentas, hayan comentado bien, dado like y compartido la publicación.";
     }
 
-    return `${getGiveawayStatusText()} Para participar tienes que seguir a @3daura y @lummerino en TikTok e Instagram, dar like a la publicación oficial, comentar mencionando a 2 amigos y compartirla con el botón amarillo de compartir en tu perfil. El vídeo oficial estará en el TikTok de @lummerino y las bases completas están en la página del sorteo.`;
+    return `${getGiveawayStatusText()}\n\nPara participar tienes que hacer estos pasos 📲\n\n✅ Seguir a @3daura y @lummerino en TikTok e Instagram.\n❤️ Dar like a la publicación oficial.\n💬 Comentar mencionando a 2 amigos.\n📤 Compartirla con el botón amarillo de compartir en tu perfil.\n\nEl vídeo oficial estará en el TikTok de @lummerino y las bases completas están en la página del sorteo.`;
   };
 
   const localAnswer = async (text, { forceFallback = false } = {}) => {
@@ -2026,7 +2026,7 @@ ${stringifyList(knowledge.responseRules || [])}
     if (!q) return "";
 
     if (isExternalQuestion(q)) {
-      return "Ahí no puedo ayudarte, estoy pensado solo para dudas de Aura 3D. Si quieres, sí puedo orientarte con regalos, catálogo, encargos personalizados, materiales, envíos, la ruleta o el sorteo Dellafuente.";
+      return "Ahí no puedo ayudarte, estoy pensado solo para dudas de Aura 3D ✨\n\nSí puedo orientarte con:\n🎁 Regalos y catálogo.\n🧩 Encargos personalizados.\n📦 Materiales y envíos.\n🏆 Ruleta o sorteo Dellafuente.";
     }
 
     const giveaway = giveawayAnswer(q);
@@ -2051,7 +2051,7 @@ ${stringifyList(knowledge.responseRules || [])}
         "hacer",
       ])
     ) {
-      return "Sí, claro. Para pedir presupuesto, cuéntanos la idea en el formulario de contacto o por Instagram @3daura_. Lo que más nos ayuda es: fotos o referencias, medidas aproximadas, color, acabado Raw o Premium y si tienes una fecha concreta.";
+      return "Sí, claro ✨\n\nPara pedir presupuesto, cuéntanos la idea en el formulario o por Instagram @3daura_.\n\nNos ayuda mucho tener:\n📸 Fotos o referencias.\n📏 Medidas aproximadas.\n🎨 Color y acabado: Raw o Premium.\n⏱️ Si tienes una fecha concreta.";
     }
 
     if (
@@ -2066,7 +2066,7 @@ ${stringifyList(knowledge.responseRules || [])}
         "tardan",
       ])
     ) {
-      return "Si el producto está en stock, normalmente lo enviamos en 24/72h. En encargos personalizados o pintados, lo habitual es entre 5 y 10 días laborables según la complejidad. Si lo necesitas para una fecha concreta, mejor nos lo dices al pedir presupuesto.";
+      return "Depende un poco del tipo de pieza ⏱️\n\n📦 Si está en stock, normalmente lo enviamos en 24/72h.\n🎨 Si es personalizado o pintado, lo habitual es entre 5 y 10 días laborables según complejidad.\n\nSi lo necesitas para una fecha concreta, mejor nos lo dices al pedir presupuesto.";
     }
 
     if (
@@ -2080,7 +2080,7 @@ ${stringifyList(knowledge.responseRules || [])}
         "resistente",
       ])
     ) {
-      return "Trabajamos principalmente con PLA+ de buena calidad porque da buen acabado y resistencia para figuras y decoración. Si el proyecto necesita otro material, lo podemos valorar según la pieza y el uso que vaya a tener.";
+      return "Trabajamos principalmente con PLA+ de buena calidad 🧩\n\n✨ Da buen acabado para figuras y decoración.\n💪 Tiene buena resistencia para piezas de uso normal.\n\nSi el proyecto necesita otro material, lo podemos valorar según la pieza y el uso que vaya a tener.";
     }
 
     if (
@@ -2096,7 +2096,7 @@ ${stringifyList(knowledge.responseRules || [])}
         "cuánto",
       ])
     ) {
-      return "Tenemos precios orientativos: Raw desde 15€, Premium desde 25€ y modelado a consultar. El precio final depende de tamaño, detalle, material, acabado y si hay que diseñar o modificar algo. Si me dices qué tienes en mente, te digo qué datos necesitaríamos para presupuestarlo.";
+      return "Tenemos precios orientativos, pero el final depende de la pieza ✨\n\n🧩 Raw: desde 15€.\n🎨 Premium: desde 25€.\n📐 Modelado o modificaciones: a consultar.\n\nInfluyen tamaño, detalle, material y acabado. Si me dices qué tienes en mente, te digo qué datos necesitaríamos.";
     }
 
     if (
@@ -2111,7 +2111,7 @@ ${stringifyList(knowledge.responseRules || [])}
         "modelado",
       ])
     ) {
-      return "Tenemos tres caminos: Raw, si quieres la pieza limpia para pintarla tú; Premium, si quieres recibirla ya preparada y con acabado artístico; y Diseño Personalizado, si hay que adaptar, escalar o crear algo a medida. Para regalo, normalmente recomendamos Premium o personalizado.";
+      return "Tenemos tres caminos principales ✨\n\n🧩 Raw: pieza limpia si quieres pintarla tú.\n🎨 Premium: preparada y con acabado artístico.\n📐 Diseño personalizado: para adaptar, escalar o crear algo a medida.\n\nPara regalo, normalmente recomendamos Premium o personalizado.";
     }
 
     if (
@@ -2143,21 +2143,21 @@ ${stringifyList(knowledge.responseRules || [])}
         const count = data.products.filter(
           (product) => product.visible !== false,
         ).length;
-        return `Ahora mismo tenemos ${count} piezas visibles en la galería, organizadas por secciones como ${categories}. Puedes filtrar por categoría o buscar por palabras clave; si buscas algo concreto, dime estilo o temática y te recomiendo opciones.`;
+        return `Ahora mismo tenemos ${count} piezas visibles en la galería ✨\n\n🧩 Secciones: ${categories}.\n🔎 Puedes filtrar por categoría o buscar por palabras clave.\n\nSi buscas algo concreto, dime estilo o temática y te recomiendo opciones.`;
       }
-      return "Puedes ver nuestras piezas en la Galería completa, con filtros por secciones y búsqueda por palabras clave. Si no encuentras justo lo que quieres, también hacemos encargos personalizados.";
+      return "Puedes ver nuestras piezas en la Galería completa ✨\n\n🔎 Tiene filtros por secciones y búsqueda por palabras clave.\n🧩 Si no encuentras justo lo que quieres, también hacemos encargos personalizados.";
     }
 
     if (
       hasAny(q, ["ruleta", "descuento", "premio", "premios", "girar", "suerte"])
     ) {
-      return "La ruleta es una promo para conseguir descuentos o premios en Aura 3D. Rellenas tus datos, giras una vez y, si te toca premio, queda registrado para que podamos gestionarlo contigo. Es una forma rápida de llevarte una ventaja para tu próximo pedido.";
+      return "La ruleta es una promo para conseguir descuentos o premios en Aura 3D 🎡\n\n📝 Rellenas tus datos.\n🎯 Giras una vez.\n🏆 Si toca premio, queda registrado para poder gestionarlo contigo.\n\nEs una forma rápida de llevarte una ventaja para tu próximo pedido.";
     }
 
     if (
       hasAny(q, ["comprar", "wallapop", "vinted", "cults", "stl", "descargar"])
     ) {
-      return "Puedes comprar o contactar desde la web y, cuando un producto esté disponible, también mediante Wallapop o Vinted. Si buscas archivos digitales, algunos STL pueden estar en Cults3D. Para piezas personalizadas, lo mejor es escribirnos primero con la idea.";
+      return "Puedes comprar o contactar de varias formas 📲\n\n🧩 Desde la web, para dudas o encargos personalizados.\n📦 En Wallapop o Vinted cuando el producto esté disponible.\n📐 En Cults3D si buscas archivos digitales/STL.\n\nPara piezas personalizadas, lo mejor es escribirnos primero con la idea.";
     }
 
     if (
@@ -2172,11 +2172,11 @@ ${stringifyList(knowledge.responseRules || [])}
         "sois",
       ])
     ) {
-      return "Aura 3D somos Sergio Valiente y Carlos Parriego. El proyecto nace de probar ideas, imprimir, mejorar acabados y convertir piezas 3D en regalos, decoración y encargos personalizados. Nos gusta que cada pieza tenga algo especial para quien la pide.";
+      return "Aura 3D somos Sergio Valiente y Carlos Parriego ✨\n\n🧩 El proyecto nace de probar ideas, imprimir y mejorar acabados.\n🎁 Creamos piezas 3D para regalos, decoración y encargos personalizados.\n🧡 Nos gusta que cada pieza tenga algo especial para quien la pide.";
     }
 
     if (forceFallback) {
-      return "Te puedo orientar sobre Aura 3D, pero necesito un poco más de contexto. ¿Buscas un regalo, una pieza personalizada, algo del catálogo, información de envíos, el sorteo Dellafuente o un presupuesto?";
+      return "Te puedo orientar sobre Aura 3D, pero necesito un poco más de contexto ✨\n\n¿Buscas un regalo, una pieza personalizada, algo del catálogo, información de envíos, el sorteo Dellafuente o un presupuesto?";
     }
 
     return "";
