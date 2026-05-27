@@ -1286,8 +1286,8 @@ footer h3 {
   position: fixed;
   right: 1.2rem;
   bottom: 1.2rem;
-  z-index: 990;
-  display: none;
+  z-index: 1850;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 50px;
@@ -1297,11 +1297,28 @@ footer h3 {
   border-radius: 999px;
   cursor: pointer;
   box-shadow: var(--shadow-lg);
-  transition: var(--transition);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(18px) scale(0.94);
+  touch-action: manipulation;
+  transition:
+    opacity 0.24s ease,
+    visibility 0.24s ease,
+    transform 0.24s ease,
+    box-shadow 0.24s ease;
 }
 
-#scrollTopBtn:hover {
-  transform: translateY(-4px);
+#scrollTopBtn.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+#scrollTopBtn:hover,
+#scrollTopBtn:focus-visible {
+  transform: translateY(-4px) scale(1.03);
 }
 
 .toast-notification {
@@ -3524,10 +3541,12 @@ select option:checked,
   bottom: 1.1rem;
   z-index: 1700;
   font-family: inherit;
+  pointer-events: none;
 }
 
 .aura-chat-toggle {
   position: relative;
+  pointer-events: auto;
   display: inline-flex;
   align-items: center;
   gap: 0.62rem;
@@ -3566,6 +3585,7 @@ select option:checked,
 
 .aura-chat-panel {
   position: absolute;
+  pointer-events: auto;
   left: 0;
   bottom: calc(100% + 0.85rem);
   width: min(92vw, 390px);
@@ -4508,5 +4528,13 @@ select option:checked,
     margin-left: auto;
     margin-right: auto;
     padding-inline: 0.05rem;
+  }
+}
+@media (max-width: 640px) {
+  #scrollTopBtn {
+    right: 0.9rem;
+    bottom: 5.25rem;
+    width: 48px;
+    height: 48px;
   }
 }

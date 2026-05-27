@@ -175,15 +175,30 @@ function initScrollTop() {
   const scrollTopBtn = $("#scrollTopBtn");
   if (!scrollTopBtn) return;
 
+  const currentScrollY = () =>
+    window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
   const update = () => {
-    scrollTopBtn.style.display = window.scrollY > 320 ? "flex" : "none";
+    const shouldShow = currentScrollY() > 320;
+    scrollTopBtn.classList.toggle("is-visible", shouldShow);
+    scrollTopBtn.setAttribute("aria-hidden", shouldShow ? "false" : "true");
+  };
+
+  const goTop = (event) => {
+    event?.preventDefault?.();
+    event?.stopPropagation?.();
+
+    const behavior = prefersReducedMotion ? "auto" : "smooth";
+    window.scrollTo({ top: 0, left: 0, behavior });
+    document.documentElement.scrollTo?.({ top: 0, left: 0, behavior });
+    document.body.scrollTo?.({ top: 0, left: 0, behavior });
   };
 
   update();
   window.addEventListener("scroll", update, { passive: true });
-  scrollTopBtn.addEventListener("click", () =>
-    window.scrollTo({ top: 0, behavior: "smooth" }),
-  );
+  window.addEventListener("resize", update, { passive: true });
+  scrollTopBtn.addEventListener("click", goTop);
+  scrollTopBtn.addEventListener("touchend", goTop, { passive: false });
 }
 
 function initBuyOptions() {
