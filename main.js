@@ -1479,6 +1479,7 @@ function initAuraChatbot() {
       <div class="aura-chat-messages" role="log" aria-live="polite"></div>
 
       <div class="aura-chat-suggestions" aria-label="Preguntas sugeridas">
+        <button type="button">¿Cómo participo en el sorteo Dellafuente?</button>
         <button type="button">Quiero un regalo, ¿qué me recomendáis?</button>
         <button type="button">¿Tenéis cosas de música?</button>
         <button type="button">¿Qué puedo pedir para mi mascota?</button>
@@ -1616,6 +1617,36 @@ function initAuraChatbot() {
       .map((item) => `P: ${item.question}\nR: ${item.answer}`)
       .join("\n");
 
+    const giveaway = knowledge.dellafuenteGiveaway || null;
+    const giveawayPrizes = (giveaway?.prizes || [])
+      .map(
+        (prize) =>
+          `- ${prize.position}: ${prize.name}. ${prize.details || ""}${prize.originalPrice ? ` Precio original: ${prize.originalPrice}.` : ""}`,
+      )
+      .join("\n");
+    const giveawaySummary = giveaway
+      ? `
+${giveaway.name}: ${giveaway.description}
+Página: ${giveaway.page}
+Plataforma: ${giveaway.platform}
+Organizan: ${(giveaway.organizers || []).join(", ")}
+Fechas: ${giveaway.dates?.summary || "Del 1 al 7 de junio de 2026."} Fin técnico: ${giveaway.dates?.technicalEnd || "8 de junio de 2026 a las 00:00, hora de España"}.
+Publicación oficial: ${giveaway.officialPost}
+Premios:
+${giveawayPrizes}
+Azulejos elegibles para el 1er premio: ${(giveaway.eligibleTiles || []).join(", ")}.
+Cómo participar:
+${stringifyList((giveaway.participationSteps || []).map((step, index) => `${index + 1}. ${step}`))}
+Participaciones extra: ${stringifyList(giveaway.extraEntries || [])}
+Participaciones no válidas: ${(giveaway.invalidEntries || []).join(", ")}.
+Elección y comprobación: ${stringifyList(giveaway.winnerSelection || [])}
+Contacto ganador: ${giveaway.winnerContact || ""}
+Envío: ${giveaway.shipping || ""}
+Aviso: ${giveaway.disclaimer || ""}
+Guía para responder: ${stringifyList(giveaway.answerGuidance || [])}
+`.trim()
+      : "No hay información específica de sorteo cargada.";
+
     knowledgeSummaryCache = `
 EMPRESA
 ${knowledge.business?.name || "Aura 3D"}: ${knowledge.business?.description || "Estudio de diseño e impresión 3D."}
@@ -1651,6 +1682,9 @@ RULETA
 ${knowledge.wheelPromotion?.description || "Promoción de premios y descuentos."}
 Premios posibles: ${(knowledge.wheelPromotion?.possiblePrizes || []).join(", ")}.
 Reglas: ${stringifyList(knowledge.wheelPromotion?.rules || [])}
+
+SORTEO DELLAFUENTE
+${giveawaySummary}
 
 CONTACTO
 Formulario: ${knowledge.contact?.form || "Formulario de contacto en la web."}
@@ -1948,13 +1982,55 @@ ${stringifyList(knowledge.responseRules || [])}
     return "";
   };
 
+  const getGiveawayStatusText = () => {
+    const start = new Date("2026-06-01T00:00:00+02:00").getTime();
+    const end = new Date("2026-06-08T00:00:00+02:00").getTime();
+    const now = Date.now();
+
+    if (now < start) {
+      return "El sorteo empieza el 1 de junio de 2026 y estará abierto hasta el 7 de junio de 2026.";
+    }
+
+    if (now >= start && now < end) {
+      return "El sorteo está activo ahora mismo y puedes participar hasta el 7 de junio de 2026.";
+    }
+
+    return "El sorteo ya finalizó: el periodo de participación fue del 1 al 7 de junio de 2026.";
+  };
+
+  const giveawayAnswer = (q) => {
+    const mentionsGiveaway =
+      hasAny(q, ["sorteo", "sortear", "sortea", "bases", "ganador", "ganadores", "lummerino"]) ||
+      (q.includes("dellafuente") &&
+        hasAny(q, ["premio", "premios", "ganar", "gano", "ganó", "participar", "participacion", "participación"]));
+
+    if (!mentionsGiveaway) return "";
+
+    if (hasAny(q, ["premio", "premios", "gana", "ganar", "sortea", "sortean"])) {
+      return "En el sorteo Dellafuente hay dos premios: el 1er ganador se lleva un azulejo Dellafuente a elegir entre los modelos del catálogo del sorteo, y el 2º ganador se lleva el cojín Dellafuente. Los azulejos del sorteo tienen precio original de 20€.";
+    }
+
+    if (hasAny(q, ["fecha", "cuando", "cuándo", "hasta", "empieza", "termina", "activo", "finaliza"])) {
+      return `${getGiveawayStatusText()} En la página del sorteo puedes ver el contador y abrir las bases completas en PDF.`;
+    }
+
+    if (hasAny(q, ["ganador", "ganadores", "resultado", "resultados", "elegir", "aleatorio"])) {
+      return "Los ganadores del sorteo Dellafuente se elegirán de forma aleatoria con una herramienta compatible con comentarios de TikTok. Antes de anunciarlos comprobaremos que cumplen los requisitos: seguir a ambas cuentas en TikTok e Instagram, comentar correctamente, dar like y compartir la publicación.";
+    }
+
+    return `${getGiveawayStatusText()} Para participar tienes que seguir a @3daura y @lummerino en TikTok e Instagram, dar like a la publicación oficial, comentar mencionando a 2 amigos y compartirla con el botón amarillo de compartir en tu perfil. El vídeo oficial estará en el TikTok de @lummerino y las bases completas están en la página del sorteo.`;
+  };
+
   const localAnswer = async (text, { forceFallback = false } = {}) => {
     const q = normalize(text);
     if (!q) return "";
 
     if (isExternalQuestion(q)) {
-      return "Ahí no puedo ayudarte, estoy pensado solo para dudas de Aura 3D. Si quieres, sí puedo orientarte con regalos, catálogo, encargos personalizados, materiales, envíos o la ruleta.";
+      return "Ahí no puedo ayudarte, estoy pensado solo para dudas de Aura 3D. Si quieres, sí puedo orientarte con regalos, catálogo, encargos personalizados, materiales, envíos, la ruleta o el sorteo Dellafuente.";
     }
+
+    const giveaway = giveawayAnswer(q);
+    if (giveaway) return giveaway;
 
     const recommendation = await recommendationAnswer(q);
     if (recommendation) return recommendation;
@@ -2100,7 +2176,7 @@ ${stringifyList(knowledge.responseRules || [])}
     }
 
     if (forceFallback) {
-      return "Te puedo orientar sobre Aura 3D, pero necesito un poco más de contexto. ¿Buscas un regalo, una pieza personalizada, algo del catálogo, información de envíos o un presupuesto?";
+      return "Te puedo orientar sobre Aura 3D, pero necesito un poco más de contexto. ¿Buscas un regalo, una pieza personalizada, algo del catálogo, información de envíos, el sorteo Dellafuente o un presupuesto?";
     }
 
     return "";
