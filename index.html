@@ -37,23 +37,30 @@
     <div class="site-noise" aria-hidden="true"></div>
 
     <div
-      id="promo-banner"
-      class="promo-banner"
+      id="mobile-review-banner"
+      class="mobile-review-banner"
       role="region"
-      aria-label="Promoción ruleta Aura 3D"
+      aria-label="Invitación para dejar una reseña"
+      hidden
     >
-      <div class="promo-sheen" aria-hidden="true"></div>
-      <div class="container promo-content">
+      <div class="container mobile-review-banner-content">
         <span>
-          🎉 <strong>¡OFERTA EXCLUSIVA!</strong> Gira la ruleta y gana premios
-          increíbles. 🎁
+          <i class="fas fa-star"></i>
+          ¿Ya tienes tu pedido? Ayúdanos con tu reseña
         </span>
-        <a href="ruleta.html" class="btn-promo-small">Probar Suerte</a>
+        <a
+          href="https://g.page/r/CTBwuT6hxu3ZEBM/review"
+          class="mobile-review-banner-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Dejar reseña
+        </a>
         <button
-          id="close-banner"
-          class="close-promo"
+          id="close-mobile-review-banner"
+          class="mobile-review-banner-close"
           type="button"
-          aria-label="Cerrar promoción"
+          aria-label="Cerrar aviso de reseña"
         >
           <i class="fas fa-times"></i>
         </button>
@@ -534,47 +541,124 @@
           <span class="tag">Clientes</span>
           <h2>Experiencia Aura 3D</h2>
           <p>
-            Más allá de la impresión: envíos rápidos, packaging cuidado y trato
-            cercano.
+            Opiniones reales de clientes que ya han confiado en Aura 3D y han
+            quedado satisfechos.
           </p>
         </div>
-        <div class="grid-3">
-          <article class="review-card square-style fade-in">
-            <div class="review-image-square">
-              <div class="placeholder-img">
-                <img src="assets/images/reseñas/reseña_2.png" alt="Caja" />
+        <div class="google-reviews-panel fade-in">
+          <div class="real-reviews-grid" aria-label="Reseñas reales de Google Maps">
+            <article class="real-review-card has-review-image">
+              <figure class="real-review-media">
+                <img
+                  src="assets/images/reseñas/google-sergio-albalat.png"
+                  alt="Azulejo personalizado de corales impreso por Aura 3D"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="real-review-body">
+                <div class="real-review-header">
+                  <div class="review-avatar-letter review-avatar-pink">S</div>
+                  <div>
+                    <h3>Sergio Albalat Gomez</h3>
+                    <span>4 reseñas · 1 foto</span>
+                  </div>
+                </div>
+                <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+                <span class="review-source">Google Maps</span>
+                <p>
+                  "Encantado con mi azulejo!Envio super rapido,repetire sin
+                  duda."
+                </p>
               </div>
-            </div>
-            <div class="stars">★★★★★</div>
-            <p>"Me sorprendió lo bien protegido que venía todo. ¡Un 10!"</p>
-            <h4>Carlos M.</h4>
-          </article>
-          <article class="review-card square-style fade-in">
-            <div class="review-image-square">
-              <div class="placeholder-img">
-                <img src="assets/images/reseñas/reseña_1.png" alt="Oso" />
+            </article>
+
+            <article class="real-review-card is-featured-review">
+              <div class="real-review-body">
+                <div class="real-review-header">
+                  <div class="review-avatar-letter review-avatar-slate">A</div>
+                  <div>
+                    <h3>Angelines Dolera</h3>
+                    <span>9 reseñas · 3 fotos</span>
+                  </div>
+                </div>
+                <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+                <span class="review-source">Google Maps</span>
+                <p>
+                  "Todos sus trabajos están hechos con mucho cariño y mucha
+                  dedicación"
+                </p>
               </div>
-            </div>
-            <div class="stars">★★★★★</div>
-            <p>
-              "Respondieron al momento por Instagram con medidas exactas y
-              fotos. Da gusto tratar con gente así."
-            </p>
-            <h4>Sara R.</h4>
-          </article>
-          <article class="review-card square-style fade-in">
-            <div class="review-image-square">
-              <div class="placeholder-img">
-                <img src="assets/images/reseñas/reseña_3.png" alt="Vecna" />
+            </article>
+
+            <article class="real-review-card has-review-image">
+              <figure class="real-review-media">
+                <img
+                  src="assets/images/reseñas/google-lu-merino.png"
+                  alt="Producto personalizado Dellafuente con tarjeta de Aura 3D"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="real-review-body">
+                <div class="real-review-header">
+                  <div class="review-avatar-letter review-avatar-ring">L</div>
+                  <div>
+                    <h3>Lú Merino</h3>
+                    <span>12 reseñas · 1 foto</span>
+                  </div>
+                </div>
+                <div class="review-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+                <span class="review-source">Google Maps</span>
+                <p>
+                  "Amables y muy trabajadores,te explican como va tu diseño en
+                  todo momento,envio super rápido y muy bien empaquetado."
+                </p>
               </div>
+            </article>
+          </div>
+
+          <article class="google-review-invite">
+            <div class="google-review-icon" aria-hidden="true">
+              <i class="fas fa-star"></i>
             </div>
-            <div class="stars">★★★★★</div>
-            <p>
-              "Llegó justo a tiempo. La presentación es impecable, lista para
-              regalar directamente."
-            </p>
-            <h4>Lucía P.</h4>
+            <div class="google-review-copy">
+              <span class="google-reviews-kicker">Google Maps</span>
+              <h3>¿Te ha gustado tu pedido?</h3>
+              <p>
+                Si ya tienes tu pieza Aura 3D, nos encantaría conocer tu
+                experiencia. Puedes contarnos qué te ha parecido el acabado, el
+                trato recibido, el envío o incluso subir una foto del producto.
+                Cada reseña nos ayuda muchísimo a mejorar y a que nuevos
+                clientes confíen en nuestro trabajo.
+              </p>
+              <span class="google-review-note">
+                Se abrirá Google para que puedas escribir tu opinión en menos de
+                un minuto.
+              </span>
+            </div>
           </article>
+
+          <div class="google-reviews-actions" aria-label="Acciones de reseñas en Google">
+            <a
+              class="btn-primary"
+              id="google-review-cta"
+              href="https://g.page/r/CTBwuT6hxu3ZEBM/review"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fas fa-star"></i>
+              Dejar reseña en Google
+            </a>
+            <a
+              class="btn-secondary"
+              id="google-reviews-link"
+              href="https://maps.app.goo.gl/aT8gJy1tkxGCemg5A"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fas fa-map-location-dot"></i>
+              Ver perfil en Maps
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -834,6 +918,61 @@
         <div>
           <h4>¡Recibido con éxito!</h4>
           <p>Sergio o Carlos te contactarán pronto.</p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="sorteo-popup"
+      class="modal-overlay sorteo-popup-overlay"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-content sorteo-popup"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sorteo-popup-title"
+      >
+        <button
+          id="close-sorteo-popup"
+          class="modal-close"
+          type="button"
+          aria-label="Cerrar aviso del sorteo"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="sorteo-popup-body">
+          <div class="sorteo-popup-logos" aria-label="Colaboradores del sorteo">
+            <img
+              src="assets/images/iconos/logo_png_blanco.png"
+              alt="Aura 3D"
+              loading="lazy"
+            />
+            <span>x</span>
+            <img
+              src="assets/images/sorteo/benditos-club.jpg"
+              alt="Benditos Club"
+              loading="lazy"
+            />
+          </div>
+          <img
+            class="sorteo-popup-dellafuente"
+            src="assets/images/sorteo/dellafuente-logo.png"
+            alt="Dellafuente"
+            loading="lazy"
+          />
+          <span class="sorteo-popup-tag">Del 1 al 7 de junio</span>
+          <h2 id="sorteo-popup-title">Sorteo Dellafuente activo</h2>
+          <p>
+            Participa en el sorteo de Aura 3D y consulta premios, requisitos,
+            bases y condiciones antes de apuntarte.
+          </p>
+          <a href="sorteo.html" class="btn-primary btn-full">
+            Ver sorteo y bases <i class="fas fa-arrow-right"></i>
+          </a>
+          <button id="sorteo-popup-later" class="btn-ghost" type="button">
+            Seguir viendo la web
+          </button>
         </div>
       </div>
     </div>

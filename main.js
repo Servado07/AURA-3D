@@ -699,29 +699,7 @@ function initCatalogLikes() {
 }
 
 function initPromo() {
-  const promoBanner = $("#promo-banner");
-  const closeBannerBtn = $("#close-banner");
   const promoPopup = $("#promo-popup");
-  let bannerHideTimer = null;
-
-  const hideBanner = () => {
-    if (!promoBanner) return;
-    window.clearTimeout(bannerHideTimer);
-    promoBanner.style.transform = "translateY(-100%)";
-    document.body.classList.remove("banner-active");
-    window.setTimeout(() => {
-      promoBanner.style.display = "none";
-    }, 350);
-  };
-
-  if (promoBanner) {
-    document.body.classList.add("banner-active");
-    promoBanner.style.display = "flex";
-    promoBanner.style.transform = "translateY(0)";
-
-    closeBannerBtn?.addEventListener("click", hideBanner);
-    bannerHideTimer = window.setTimeout(hideBanner, 6200);
-  }
 
   // Popup de la ruleta desactivado: mantenemos la ruleta accesible desde el menú,
   // pero evitamos que aparezca una ventana promocional al entrar en la web.
@@ -731,6 +709,80 @@ function initPromo() {
     promoPopup.style.display = "none";
     document.body.style.overflow = "";
   }
+}
+
+function initMobileReviewBanner() {
+  const banner = $("#mobile-review-banner");
+  const closeButton = $("#close-mobile-review-banner");
+  if (!banner) return;
+
+  const isMobile = window.matchMedia("(max-width: 780px)").matches;
+  const storageKey = "aura_mobile_review_banner_closed";
+  if (!isMobile || sessionStorage.getItem(storageKey) === "1") return;
+
+  let hideTimer = null;
+
+  const hideBanner = () => {
+    window.clearTimeout(hideTimer);
+    banner.classList.remove("is-visible");
+    document.body.classList.remove("review-banner-active");
+    sessionStorage.setItem(storageKey, "1");
+    window.setTimeout(() => {
+      banner.hidden = true;
+    }, 300);
+  };
+
+  banner.hidden = false;
+  requestAnimationFrame(() => {
+    banner.classList.add("is-visible");
+    document.body.classList.add("review-banner-active");
+  });
+
+  closeButton?.addEventListener("click", hideBanner);
+  hideTimer = window.setTimeout(hideBanner, 7200);
+}
+
+function initSorteoPopup() {
+  if (!$("body.home-page-body")) return;
+
+  const popup = $("#sorteo-popup");
+  if (!popup) return;
+
+  const now = Date.now();
+  const endsAt = new Date("2026-06-08T00:00:00+02:00").getTime();
+  const storageKey = "aura_sorteo_popup_closed";
+
+  if (now >= endsAt) return;
+  if (sessionStorage.getItem(storageKey) === "1") return;
+
+  const closeButtons = [
+    $("#close-sorteo-popup"),
+    $("#sorteo-popup-later"),
+  ].filter(Boolean);
+
+  const closePopup = () => {
+    popup.classList.remove("show");
+    popup.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    sessionStorage.setItem(storageKey, "1");
+  };
+
+  window.setTimeout(() => {
+    popup.classList.add("show");
+    popup.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }, 900);
+
+  closeButtons.forEach((button) => button.addEventListener("click", closePopup));
+  popup.addEventListener("click", (event) => {
+    if (event.target === popup) closePopup();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && popup.classList.contains("show")) {
+      closePopup();
+    }
+  });
 }
 
 function throwConfetti() {
@@ -2269,6 +2321,8 @@ window.addEventListener("DOMContentLoaded", async () => {
   initCatalogLikes();
   initRuleta();
   initPromo();
+  initMobileReviewBanner();
+  initSorteoPopup();
   initMagneticElements();
   initTiltCards();
   initImagePolish();
