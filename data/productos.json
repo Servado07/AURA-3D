@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-01T16:13:50.791Z",
+  "updatedAt": "2026-06-01T16:14:36.429Z",
   "categories": [
     {
       "id": "azulejos",
@@ -350,7 +350,7 @@
         "assets/images/fnaf/fnaf_1.png"
       ],
       "alt": "Figura FNAF",
-      "featured": true,
+      "featured": false,
       "visible": true,
       "links": {
         "wallapop": "",
