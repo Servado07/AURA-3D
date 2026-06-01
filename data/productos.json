@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-21T20:45:58.136Z",
+  "updatedAt": "2026-06-01T16:13:50.791Z",
   "categories": [
     {
       "id": "azulejos",
@@ -786,6 +786,32 @@
       ],
       "alt": "Ya No Te Veo - Dellafuente",
       "featured": false,
+      "visible": true,
+      "links": {
+        "wallapop": "",
+        "vinted": "",
+        "cults": ""
+      }
+    },
+    {
+      "id": "letrero-dellafuente",
+      "title": "Letrero Dellafuente",
+      "description": "Letrero del cantante Dellafuente",
+      "primaryCategory": "azulejos",
+      "categories": [
+        "azulejos",
+        "decoracion"
+      ],
+      "keywords": [
+        "Letrero",
+        "Dellafuente",
+        "musica"
+      ],
+      "images": [
+        "assets/images/productos/letrero-dellafuente/img-0083-1780330425212-1.jpg"
+      ],
+      "alt": "Letrero Dellafuente",
+      "featured": true,
       "visible": true,
       "links": {
         "wallapop": "",
