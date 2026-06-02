@@ -29,6 +29,11 @@
   status = 200
 
 [[redirects]]
+  from = "/ruleta"
+  to = "/ruleta.html"
+  status = 200
+
+[[redirects]]
   from = "/resena"
   to = "https://g.page/r/CTBwuT6hxu3ZEBM/review"
   status = 302
