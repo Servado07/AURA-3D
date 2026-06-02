@@ -490,29 +490,6 @@ a {
   gap: 1rem;
 }
 
-.scroll-cue {
-  position: absolute;
-  bottom: 2.2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 30px;
-  height: 48px;
-  border: 1px solid rgba(255, 255, 255, 0.36);
-  border-radius: 999px;
-  display: grid;
-  place-items: start center;
-  padding-top: 8px;
-  opacity: 0.78;
-}
-
-.scroll-cue span {
-  width: 5px;
-  height: 5px;
-  background: #fff;
-  border-radius: 999px;
-  animation: scrollCue 1.6s ease-in-out infinite;
-}
-
 /* Grids/cards */
 .grid-3 {
   display: grid;
@@ -2206,16 +2183,6 @@ footer h3 {
     transform: translateY(-12px);
   }
 }
-@keyframes scrollCue {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(24px);
-    opacity: 0;
-  }
-}
 @keyframes modalIn {
   from {
     opacity: 0;
@@ -2702,38 +2669,6 @@ body.cursor-ready .cursor-glow {
 
 .hero-badges i {
   color: #fff;
-}
-
-.hero-product-strip {
-  display: flex;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-top: 1.45rem;
-}
-
-.hero-product-strip img {
-  width: clamp(64px, 9vw, 98px);
-  aspect-ratio: 1;
-  border-radius: 24px;
-  object-fit: cover;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  box-shadow: 0 20px 46px rgba(0, 0, 0, 0.28);
-  transform: rotate(var(--rot, 0deg));
-  transition: var(--transition);
-}
-
-.hero-product-strip img:nth-child(1) {
-  --rot: -6deg;
-}
-.hero-product-strip img:nth-child(2) {
-  --rot: 2deg;
-  margin-top: 1rem;
-}
-.hero-product-strip img:nth-child(3) {
-  --rot: 7deg;
-}
-.hero-product-strip img:hover {
-  transform: translateY(-8px) scale(1.06) rotate(0deg);
 }
 
 .brand-marquee {
@@ -3390,10 +3325,6 @@ body.cursor-ready .cursor-glow {
     font-size: 0.9rem;
   }
 
-  .hero-product-strip {
-    margin-top: 1rem;
-  }
-
   .catalog-jump-menu {
     overflow-x: auto;
     flex-wrap: nowrap;
@@ -3424,11 +3355,6 @@ body.cursor-ready .cursor-glow {
   .hero-badges span {
     font-size: 0.82rem;
     min-height: 36px;
-  }
-
-  .hero-product-strip img {
-    width: 66px;
-    border-radius: 18px;
   }
 
   .category-showcase {
