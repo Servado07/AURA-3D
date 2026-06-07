@@ -2,26 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://3daura.store/</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://3daura.store/galeria</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://3daura.store/ruleta</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://3daura.store/sorteo</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.90</priority>
   </url>
 </urlset>

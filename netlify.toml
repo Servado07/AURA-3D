@@ -19,11 +19,6 @@
 
 
 [[redirects]]
-  from = "/sorteo"
-  to = "/sorteo.html"
-  status = 200
-
-[[redirects]]
   from = "/galeria"
   to = "/galeria.html"
   status = 200

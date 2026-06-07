@@ -116,78 +116,6 @@
       "No inventar códigos automáticos si no se indican en la web."
     ]
   },
-  "dellafuenteGiveaway": {
-    "name": "Sorteo Dellafuente Aura 3D x @lummerino",
-    "description": "Sorteo especial de Aura 3D x @lummerino en TikTok para fans de Dellafuente.",
-    "page": "https://3daura.store/sorteo",
-    "platform": "TikTok",
-    "organizers": [
-      "Aura 3D",
-      "@lummerino"
-    ],
-    "officialPost": "El vídeo oficial del sorteo estará en el TikTok de @lummerino. Si el usuario pide el enlace exacto y no está disponible, dirigir al perfil https://www.tiktok.com/@lummerino y a la página https://3daura.store/sorteo.",
-    "dates": {
-      "start": "1 de junio de 2026",
-      "end": "7 de junio de 2026",
-      "technicalEnd": "8 de junio de 2026 a las 00:00, hora de España",
-      "summary": "El periodo de participación va del 1 de junio de 2026 al 7 de junio de 2026."
-    },
-    "prizes": [
-      {
-        "position": "1er premio",
-        "name": "Azulejo Dellafuente a elegir",
-        "details": "El primer ganador recibirá 1 azulejo de Dellafuente a elegir entre los modelos del catálogo del sorteo.",
-        "originalPrice": "20€"
-      },
-      {
-        "position": "2º premio",
-        "name": "Cojín Dellafuente",
-        "details": "El segundo ganador recibirá el cojín Dellafuente mostrado en la página del sorteo."
-      }
-    ],
-    "eligibleTiles": [
-      "Azulejos de Corales",
-      "Azulejos de Corales - Rojo",
-      "En esta casa se escucha Dellafuente",
-      "DellafuenteFC Logo",
-      "Ansia Viva",
-      "13/18",
-      "Milagro",
-      "Cuéntamelo",
-      "Ya No Te Veo"
-    ],
-    "participationSteps": [
-      "Seguir a @3daura y @lummerino en TikTok e Instagram.",
-      "Dar like a la publicación oficial del sorteo.",
-      "Comentar mencionando a 2 amigos.",
-      "Compartir la publicación con el botón amarillo de compartir en el perfil, no enviarla solo por privado a una persona."
-    ],
-    "extraEntries": [
-      "Se puede comentar varias veces si se mencionan personas diferentes.",
-      "No cuentan comentarios repetidos ni menciones no válidas."
-    ],
-    "invalidEntries": [
-      "Cuentas falsas.",
-      "Bots.",
-      "Cuentas creadas solo para sorteos.",
-      "Comentarios con menciones repetidas.",
-      "Participaciones que no cumplan todos los requisitos."
-    ],
-    "winnerSelection": [
-      "Los ganadores se elegirán de forma aleatoria con una aplicación o herramienta compatible con comentarios de TikTok.",
-      "Antes de anunciar a cada ganador, Aura 3D comprobará que cumple todos los requisitos.",
-      "Se recomienda grabar la pantalla durante el sorteo para que el proceso sea transparente."
-    ],
-    "winnerContact": "Una vez confirmado cada ganador, se anunciará en las redes de las cuentas organizadoras y se contactará por mensaje privado. El primer ganador deberá indicar qué azulejo quiere elegir y facilitar los datos necesarios para gestionar el envío.",
-    "shipping": "El envío se puede plantear como incluido para España peninsular. Si el ganador es de Baleares, Canarias, Ceuta, Melilla o fuera de España, se revisará el coste del envío antes de gestionarlo.",
-    "disclaimer": "Este sorteo no está patrocinado, administrado ni asociado oficialmente a TikTok. Las cuentas organizadoras son Aura 3D y @lummerino.",
-    "answerGuidance": [
-      "Si preguntan por el sorteo, responder de forma directa con fechas, premios y pasos principales.",
-      "Si preguntan si todavía pueden participar, usar las fechas absolutas del sorteo y no inventar ampliaciones.",
-      "Si preguntan por bases legales o condiciones completas, recomendar abrir el PDF de bases desde la página del sorteo.",
-      "No confundir este sorteo con la ruleta de premios de Aura 3D; son promociones distintas."
-    ]
-  },
   "contact": {
     "form": "Formulario de contacto en la sección Contacto de la web.",
     "email": "3daurainfo@gmail.com",
@@ -224,7 +152,7 @@
     }
   ],
   "responseRules": [
-    "Responder solo sobre Aura 3D, su web, catálogo, servicios, ruleta, sorteo Dellafuente, pedidos, contacto o impresión 3D relacionada con Aura 3D.",
+    "Responder solo sobre Aura 3D, su web, catálogo, servicios, ruleta, pedidos, contacto o impresión 3D relacionada con Aura 3D.",
     "Si preguntan algo externo como clima, política, noticias, deberes, programación, salud, finanzas o recetas, rechazar amablemente y redirigir a Aura 3D.",
     "No inventar precios finales, stock exacto, códigos de descuento, fechas garantizadas ni disponibilidad si no están en el contexto.",
     "Si falta información, recomendar usar el formulario, Instagram @3daura_ o el email 3daurainfo@gmail.com.",
@@ -232,7 +160,6 @@
     "No solicitar datos sensibles. Para presupuestos, pedir solo información del proyecto."
   ],
   "quickQuestions": [
-    "¿Cómo participo en el sorteo Dellafuente?",
     "Quiero un regalo, ¿qué me recomendáis?",
     "¿Tenéis cosas de música?",
     "¿Qué puedo pedir para mi mascota?",

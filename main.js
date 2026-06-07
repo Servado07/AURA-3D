@@ -742,49 +742,6 @@ function initMobileReviewBanner() {
   hideTimer = window.setTimeout(hideBanner, 7200);
 }
 
-function initSorteoPopup() {
-  if (!$("body.home-page-body")) return;
-
-  const popup = $("#sorteo-popup");
-  if (!popup) return;
-
-  const now = Date.now();
-  const endsAt = new Date("2026-06-08T00:00:00+02:00").getTime();
-  const storageKey = "aura_sorteo_popup_closed";
-
-  if (now >= endsAt) return;
-  if (sessionStorage.getItem(storageKey) === "1") return;
-
-  const closeButtons = [
-    $("#close-sorteo-popup"),
-    $("#sorteo-popup-later"),
-  ].filter(Boolean);
-
-  const closePopup = () => {
-    popup.classList.remove("show");
-    popup.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
-    sessionStorage.setItem(storageKey, "1");
-  };
-
-  window.setTimeout(() => {
-    popup.classList.add("show");
-    popup.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-  }, 900);
-
-  closeButtons.forEach((button) => button.addEventListener("click", closePopup));
-  popup.addEventListener("click", (event) => {
-    if (event.target === popup) closePopup();
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && popup.classList.contains("show")) {
-      closePopup();
-    }
-  });
-}
-
 function throwConfetti() {
   const colors = ["#6366f1", "#ec4899", "#06b6d4", "#facc15", "#10b981"];
   const amount = prefersReducedMotion ? 24 : 120;
@@ -1531,7 +1488,6 @@ function initAuraChatbot() {
       <div class="aura-chat-messages" role="log" aria-live="polite"></div>
 
       <div class="aura-chat-suggestions" aria-label="Preguntas sugeridas">
-        <button type="button">¿Cómo participo en el sorteo Dellafuente?</button>
         <button type="button">Quiero un regalo, ¿qué me recomendáis?</button>
         <button type="button">¿Tenéis cosas de música?</button>
         <button type="button">¿Qué puedo pedir para mi mascota?</button>
@@ -1566,7 +1522,7 @@ function initAuraChatbot() {
   const defaultMessage = {
     role: "assistant",
     content:
-      "¡Hola! Soy AuraBot ✨\n\nCuéntame qué estás buscando y te oriento con ideas, catálogo, encargos, regalos, tiempos, presupuestos o el sorteo Dellafuente.",
+      "¡Hola! Soy AuraBot ✨\n\nCuéntame qué estás buscando y te oriento con ideas, catálogo, encargos, regalos, tiempos o presupuestos.",
   };
 
   const saveHistory = () => {
@@ -1669,36 +1625,6 @@ function initAuraChatbot() {
       .map((item) => `P: ${item.question}\nR: ${item.answer}`)
       .join("\n");
 
-    const giveaway = knowledge.dellafuenteGiveaway || null;
-    const giveawayPrizes = (giveaway?.prizes || [])
-      .map(
-        (prize) =>
-          `- ${prize.position}: ${prize.name}. ${prize.details || ""}${prize.originalPrice ? ` Precio original: ${prize.originalPrice}.` : ""}`,
-      )
-      .join("\n");
-    const giveawaySummary = giveaway
-      ? `
-${giveaway.name}: ${giveaway.description}
-Página: ${giveaway.page}
-Plataforma: ${giveaway.platform}
-Organizan: ${(giveaway.organizers || []).join(", ")}
-Fechas: ${giveaway.dates?.summary || "Del 1 al 7 de junio de 2026."} Fin técnico: ${giveaway.dates?.technicalEnd || "8 de junio de 2026 a las 00:00, hora de España"}.
-Publicación oficial: ${giveaway.officialPost}
-Premios:
-${giveawayPrizes}
-Azulejos elegibles para el 1er premio: ${(giveaway.eligibleTiles || []).join(", ")}.
-Cómo participar:
-${stringifyList((giveaway.participationSteps || []).map((step, index) => `${index + 1}. ${step}`))}
-Participaciones extra: ${stringifyList(giveaway.extraEntries || [])}
-Participaciones no válidas: ${(giveaway.invalidEntries || []).join(", ")}.
-Elección y comprobación: ${stringifyList(giveaway.winnerSelection || [])}
-Contacto ganador: ${giveaway.winnerContact || ""}
-Envío: ${giveaway.shipping || ""}
-Aviso: ${giveaway.disclaimer || ""}
-Guía para responder: ${stringifyList(giveaway.answerGuidance || [])}
-`.trim()
-      : "No hay información específica de sorteo cargada.";
-
     knowledgeSummaryCache = `
 EMPRESA
 ${knowledge.business?.name || "Aura 3D"}: ${knowledge.business?.description || "Estudio de diseño e impresión 3D."}
@@ -1734,9 +1660,6 @@ RULETA
 ${knowledge.wheelPromotion?.description || "Promoción de premios y descuentos."}
 Premios posibles: ${(knowledge.wheelPromotion?.possiblePrizes || []).join(", ")}.
 Reglas: ${stringifyList(knowledge.wheelPromotion?.rules || [])}
-
-SORTEO DELLAFUENTE
-${giveawaySummary}
 
 CONTACTO
 Formulario: ${knowledge.contact?.form || "Formulario de contacto en la web."}
@@ -2034,55 +1957,13 @@ ${stringifyList(knowledge.responseRules || [])}
     return "";
   };
 
-  const getGiveawayStatusText = () => {
-    const start = new Date("2026-06-01T00:00:00+02:00").getTime();
-    const end = new Date("2026-06-08T00:00:00+02:00").getTime();
-    const now = Date.now();
-
-    if (now < start) {
-      return "⏱️ El sorteo empieza el 1 de junio de 2026 y estará abierto hasta el 7 de junio de 2026.";
-    }
-
-    if (now >= start && now < end) {
-      return "🏆 El sorteo está activo ahora mismo y puedes participar hasta el 7 de junio de 2026.";
-    }
-
-    return "🔒 El sorteo ya finalizó: el periodo de participación fue del 1 al 7 de junio de 2026.";
-  };
-
-  const giveawayAnswer = (q) => {
-    const mentionsGiveaway =
-      hasAny(q, ["sorteo", "sortear", "sortea", "bases", "ganador", "ganadores", "lummerino"]) ||
-      (q.includes("dellafuente") &&
-        hasAny(q, ["premio", "premios", "ganar", "gano", "ganó", "participar", "participacion", "participación"]));
-
-    if (!mentionsGiveaway) return "";
-
-    if (hasAny(q, ["premio", "premios", "gana", "ganar", "sortea", "sortean"])) {
-      return "En el sorteo Dellafuente hay dos premios 🏆\n\n🥇 1er ganador: azulejo Dellafuente a elegir entre los modelos del catálogo del sorteo.\n🥈 2º ganador: cojín Dellafuente.\n\nLos azulejos del sorteo tienen precio original de 20€.";
-    }
-
-    if (hasAny(q, ["fecha", "cuando", "cuándo", "hasta", "empieza", "termina", "activo", "finaliza"])) {
-      return `${getGiveawayStatusText()}\n\n📄 En la página del sorteo puedes ver el contador y abrir las bases completas en PDF.`;
-    }
-
-    if (hasAny(q, ["ganador", "ganadores", "resultado", "resultados", "elegir", "aleatorio"])) {
-      return "Los ganadores del sorteo Dellafuente se elegirán de forma aleatoria 🏆\n\n📲 Usaremos una herramienta compatible con comentarios de TikTok.\n✅ Antes de anunciarlos comprobaremos que cumplen todos los requisitos.\n👀 Revisaremos que sigan a ambas cuentas, hayan comentado bien, dado like y compartido la publicación.";
-    }
-
-    return `${getGiveawayStatusText()}\n\nPara participar tienes que hacer estos pasos 📲\n\n✅ Seguir a @3daura y @lummerino en TikTok e Instagram.\n❤️ Dar like a la publicación oficial.\n💬 Comentar mencionando a 2 amigos.\n📤 Compartirla con el botón amarillo de compartir en tu perfil.\n\nEl vídeo oficial estará en el TikTok de @lummerino y las bases completas están en la página del sorteo.`;
-  };
-
   const localAnswer = async (text, { forceFallback = false } = {}) => {
     const q = normalize(text);
     if (!q) return "";
 
     if (isExternalQuestion(q)) {
-      return "Ahí no puedo ayudarte, estoy pensado solo para dudas de Aura 3D ✨\n\nSí puedo orientarte con:\n🎁 Regalos y catálogo.\n🧩 Encargos personalizados.\n📦 Materiales y envíos.\n🏆 Ruleta o sorteo Dellafuente.";
+      return "Ahí no puedo ayudarte, estoy pensado solo para dudas de Aura 3D ✨\n\nSí puedo orientarte con:\n🎁 Regalos y catálogo.\n🧩 Encargos personalizados.\n📦 Materiales y envíos.\n🏆 Ruleta de premios.";
     }
-
-    const giveaway = giveawayAnswer(q);
-    if (giveaway) return giveaway;
 
     const recommendation = await recommendationAnswer(q);
     if (recommendation) return recommendation;
@@ -2228,7 +2109,7 @@ ${stringifyList(knowledge.responseRules || [])}
     }
 
     if (forceFallback) {
-      return "Te puedo orientar sobre Aura 3D, pero necesito un poco más de contexto ✨\n\n¿Buscas un regalo, una pieza personalizada, algo del catálogo, información de envíos, el sorteo Dellafuente o un presupuesto?";
+      return "Te puedo orientar sobre Aura 3D, pero necesito un poco más de contexto ✨\n\n¿Buscas un regalo, una pieza personalizada, algo del catálogo, información de envíos, la ruleta o un presupuesto?";
     }
 
     return "";
@@ -2322,7 +2203,6 @@ window.addEventListener("DOMContentLoaded", async () => {
   initRuleta();
   initPromo();
   initMobileReviewBanner();
-  initSorteoPopup();
   initMagneticElements();
   initTiltCards();
   initImagePolish();
